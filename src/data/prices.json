@@ -1,0 +1,458 @@
+[
+  {
+    "Código": null,
+    "Passeio": "city tour imperdíveis - manhã",
+    "Descrição": "Regular",
+    "Preço custo (COP)": 119200,
+    "Valor de venda (COP)": 300000,
+    "ENTRADA": 180800
+  },
+  {
+    "Código": null,
+    "Passeio": "city tour bairros inconicos - tarde",
+    "Descrição": "Regular",
+    "Preço custo (COP)": 119200,
+    "Valor de venda (COP)": 300000,
+    "ENTRADA": 180800
+  },
+  {
+    "Código": null,
+    "Passeio": "Catedral de Sal  (BOG PASS)",
+    "Descrição": "Regular",
+    "Preço custo (COP)": 263200,
+    "Valor de venda (COP)": 380000,
+    "ENTRADA": 116800
+  },
+  {
+    "Código": null,
+    "Passeio": "Catedral de Sal + Guatavita  (BOG PASS)",
+    "Descrição": "Regular",
+    "Preço custo (COP)": 343200,
+    "Valor de venda (COP)": 600000,
+    "ENTRADA": 256800
+  },
+  {
+    "Código": null,
+    "Passeio": "Finca Cafeteira (Grupal) (BOG PASS)",
+    "Descrição": "Regular",
+    "Preço custo (COP)": 343200,
+    "Valor de venda (COP)": 650000,
+    "ENTRADA": 306800
+  },
+  {
+    "Código": null,
+    "Passeio": "Transfer in - DIURNO - 06am -09pm (bog pass)",
+    "Descrição": "Carro 3 Pessoas",
+    "Preço custo (COP)": 112000,
+    "Valor de venda (COP)": 360000,
+    "ENTRADA": 248000
+  },
+  {
+    "Código": null,
+    "Passeio": "Transfer in - DIURNO - 06am -09pm (bog pass)",
+    "Descrição": "VAN 4-6 PAX",
+    "Preço custo (COP)": 173600,
+    "Valor de venda (COP)": 550000,
+    "ENTRADA": 376400
+  },
+  {
+    "Código": null,
+    "Passeio": "Transfer in - DIURNO - 06am - 09pm (bog pass)",
+    "Descrição": "VAN 7-10 Pax",
+    "Preço custo (COP)": 260800,
+    "Valor de venda (COP)": 770000,
+    "ENTRADA": 509200
+  },
+  {
+    "Código": null,
+    "Passeio": "Transfer in - NOTURNO - 06am - 09pm (bog pass)",
+    "Descrição": "Carro 3 Pessoas",
+    "Preço custo (COP)": 127200,
+    "Valor de venda (COP)": 360000,
+    "ENTRADA": 232800
+  },
+  {
+    "Código": null,
+    "Passeio": "Transfer in - NOTURNIO - 06am - 09pm (bog pass)",
+    "Descrição": "VAN 4-6 PAX",
+    "Preço custo (COP)": 216800,
+    "Valor de venda (COP)": 550000,
+    "ENTRADA": 333200
+  },
+  {
+    "Código": null,
+    "Passeio": "Transfer in - NOTURNO - 06am - 09pm (bog pass)",
+    "Descrição": "VAN 7-10 Pax",
+    "Preço custo (COP)": 292000,
+    "Valor de venda (COP)": 770000,
+    "ENTRADA": 478000
+  },
+  {
+    "Código": null,
+    "Passeio": "Transfer OUT - DIURNO - 06am -09pm (bog pass)",
+    "Descrição": "Carro 3 Pessoas",
+    "Preço custo (COP)": 80000,
+    "Valor de venda (COP)": 360000,
+    "ENTRADA": 280000
+  },
+  {
+    "Código": null,
+    "Passeio": "Transfer OUT - DIURNO - 06am -09pm (bog pass)",
+    "Descrição": "VAN 4-6 PAX",
+    "Preço custo (COP)": 140000,
+    "Valor de venda (COP)": 550000,
+    "ENTRADA": 410000
+  },
+  {
+    "Código": null,
+    "Passeio": "Transfer OUT - DIURNO - 06am - 09pm (bog pass)",
+    "Descrição": "VAN 7-10 Pax",
+    "Preço custo (COP)": 212800,
+    "Valor de venda (COP)": 770000,
+    "ENTRADA": 557200
+  },
+  {
+    "Código": null,
+    "Passeio": "Transfer OUT - NOTURNO - 06am - 09pm (bog pass)",
+    "Descrição": "Carro 3 Pessoas",
+    "Preço custo (COP)": 91200,
+    "Valor de venda (COP)": 360000,
+    "ENTRADA": 268800
+  },
+  {
+    "Código": null,
+    "Passeio": "Transfer OUT - NOTURNIO - 06am - 09pm (bog pass)",
+    "Descrição": "VAN 4-6 PAX",
+    "Preço custo (COP)": 160800,
+    "Valor de venda (COP)": 550000,
+    "ENTRADA": 389200
+  },
+  {
+    "Código": null,
+    "Passeio": "Transfer OUT - NOTURNO - 06am - 09pm (bog pass)",
+    "Descrição": "VAN 7-10 Pax",
+    "Preço custo (COP)": 244000,
+    "Valor de venda (COP)": 770000,
+    "ENTRADA": 526000
+  },
+  {
+    "Código": null,
+    "Passeio": "Jantar Fenix Beach ",
+    "Descrição": null,
+    "Preço custo (COP)": 225000,
+    "Valor de venda (COP)": 370000,
+    "ENTRADA": 145000
+  },
+  {
+    "Código": null,
+    "Passeio": "Jantar Fenix Beach ",
+    "Descrição": null,
+    "Preço custo (COP)": 150000,
+    "Valor de venda (COP)": 300000,
+    "ENTRADA": 150000
+  },
+  {
+    "Código": null,
+    "Passeio": "Corona Island",
+    "Descrição": null,
+    "Preço custo (COP)": 633000,
+    "Valor de venda (COP)": 850000,
+    "ENTRADA": 217000
+  },
+  {
+    "Código": null,
+    "Passeio": "Capri Premium",
+    "Descrição": null,
+    "Preço custo (COP)": 390000,
+    "Valor de venda (COP)": 610000,
+    "ENTRADA": 220000
+  },
+  {
+    "Código": null,
+    "Passeio": "Capri Classic",
+    "Descrição": null,
+    "Preço custo (COP)": 330000,
+    "Valor de venda (COP)": 510000,
+    "ENTRADA": 180000
+  },
+  {
+    "Código": null,
+    "Passeio": "Isla Bela",
+    "Descrição": null,
+    "Preço custo (COP)": 300000,
+    "Valor de venda (COP)": 490000,
+    "ENTRADA": 190000
+  },
+  {
+    "Código": null,
+    "Passeio": "Isla Bela chd - 03 a 10 anos",
+    "Descrição": null,
+    "Preço custo (COP)": 260000,
+    "Valor de venda (COP)": 390000,
+    "ENTRADA": 130000
+  },
+  {
+    "Código": null,
+    "Passeio": "Mergulho iniciante",
+    "Descrição": null,
+    "Preço custo (COP)": 620000,
+    "Valor de venda (COP)": 890000,
+    "ENTRADA": 270000
+  },
+  {
+    "Código": null,
+    "Passeio": "Mergulho para certificados",
+    "Descrição": null,
+    "Preço custo (COP)": 570000,
+    "Valor de venda (COP)": 800000,
+    "ENTRADA": 230000
+  },
+  {
+    "Código": null,
+    "Passeio": "Bona Vida Sunset Adulto",
+    "Descrição": null,
+    "Preço custo (COP)": 134000,
+    "Valor de venda (COP)": 230000,
+    "ENTRADA": 96000
+  },
+  {
+    "Código": null,
+    "Passeio": "Bona Vida Sunset CHD - 7 a 14 anos",
+    "Descrição": null,
+    "Preço custo (COP)": 67000,
+    "Valor de venda (COP)": 190000,
+    "ENTRADA": 123000
+  },
+  {
+    "Código": null,
+    "Passeio": "Bona Vida Islas Adulto",
+    "Descrição": null,
+    "Preço custo (COP)": 390000,
+    "Valor de venda (COP)": 510000,
+    "ENTRADA": 120000
+  },
+  {
+    "Código": null,
+    "Passeio": "Bona Vida Islas CHD - 7 a 14 anos",
+    "Descrição": null,
+    "Preço custo (COP)": 67000,
+    "Valor de venda (COP)": 190000,
+    "ENTRADA": 123000
+  },
+  {
+    "Código": null,
+    "Passeio": "BORA BORA CLUB",
+    "Descrição": null,
+    "Preço custo (COP)": 290000,
+    "Valor de venda (COP)": 450000,
+    "ENTRADA": 160000
+  },
+  {
+    "Código": null,
+    "Passeio": "BORA VIP",
+    "Descrição": null,
+    "Preço custo (COP)": 380000,
+    "Valor de venda (COP)": 540000,
+    "ENTRADA": 160000
+  },
+  {
+    "Código": null,
+    "Passeio": "TOP 3",
+    "Descrição": null,
+    "Preço custo (COP)": 360000,
+    "Valor de venda (COP)": 500000,
+    "ENTRADA": 140000
+  },
+  {
+    "Código": null,
+    "Passeio": "PAO PAO",
+    "Descrição": null,
+    "Preço custo (COP)": 280000,
+    "Valor de venda (COP)": 450000,
+    "ENTRADA": 170000
+  },
+  {
+    "Código": null,
+    "Passeio": "Paue",
+    "Descrição": null,
+    "Preço custo (COP)": 370000,
+    "Valor de venda (COP)": 520000,
+    "ENTRADA": 150000
+  },
+  {
+    "Código": null,
+    "Passeio": "Paue CHD 04 A 07 ANOS",
+    "Descrição": null,
+    "Preço custo (COP)": 250000,
+    "Valor de venda (COP)": 370000,
+    "ENTRADA": 120000
+  },
+  {
+    "Código": null,
+    "Passeio": "Rosario de Mar plan arrecife",
+    "Descrição": null,
+    "Preço custo (COP)": 300000,
+    "Valor de venda (COP)": 450000,
+    "ENTRADA": 150000
+  },
+  {
+    "Código": null,
+    "Passeio": "rosario de mar CHD 04 a 07 anos plan arrecife",
+    "Descrição": null,
+    "Preço custo (COP)": 220000,
+    "Valor de venda (COP)": 370000,
+    "ENTRADA": 150000
+  },
+  {
+    "Código": null,
+    "Passeio": "Rosario de Mar plan abanico (open bar)",
+    "Descrição": null,
+    "Preço custo (COP)": 400000,
+    "Valor de venda (COP)": 580000,
+    "ENTRADA": 180000
+  },
+  {
+    "Código": null,
+    "Passeio": "Sabai",
+    "Descrição": null,
+    "Preço custo (COP)": 390000,
+    "Valor de venda (COP)": 520000,
+    "ENTRADA": 130000
+  },
+  {
+    "Código": null,
+    "Passeio": "sabai chd 5 a 09 anos",
+    "Descrição": null,
+    "Preço custo (COP)": 130000,
+    "Valor de venda (COP)": 380000,
+    "ENTRADA": 250000
+  },
+  {
+    "Código": null,
+    "Passeio": "alondra in",
+    "Descrição": null,
+    "Preço custo (COP)": 61000,
+    "Valor de venda (COP)": 160000,
+    "ENTRADA": 99000
+  },
+  {
+    "Código": null,
+    "Passeio": "alondra out",
+    "Descrição": null,
+    "Preço custo (COP)": 61000,
+    "Valor de venda (COP)": 140000,
+    "ENTRADA": 79000
+  },
+  {
+    "Código": null,
+    "Passeio": "alondra in out",
+    "Descrição": null,
+    "Preço custo (COP)": 122000,
+    "Valor de venda (COP)": 250000,
+    "ENTRADA": 128000
+  },
+  {
+    "Código": null,
+    "Passeio": "alondra in van 8 pax",
+    "Descrição": null,
+    "Preço custo (COP)": 160000,
+    "Valor de venda (COP)": 300000,
+    "ENTRADA": 140000
+  },
+  {
+    "Código": null,
+    "Passeio": "alondra out van 8 pax",
+    "Descrição": null,
+    "Preço custo (COP)": 160000,
+    "Valor de venda (COP)": 340000,
+    "ENTRADA": 180000
+  },
+  {
+    "Código": null,
+    "Passeio": "alondra in e out van 8 pax",
+    "Descrição": null,
+    "Preço custo (COP)": 320000,
+    "Valor de venda (COP)": 580000,
+    "ENTRADA": 260000
+  },
+  {
+    "Código": null,
+    "Passeio": "alondra in van 14pax",
+    "Descrição": null,
+    "Preço custo (COP)": 160000,
+    "Valor de venda (COP)": 300000,
+    "ENTRADA": 140000
+  },
+  {
+    "Código": null,
+    "Passeio": "alondra out van 14 pax",
+    "Descrição": null,
+    "Preço custo (COP)": 160000,
+    "Valor de venda (COP)": 340000,
+    "ENTRADA": 180000
+  },
+  {
+    "Código": null,
+    "Passeio": "alondra in e out van 14 pax",
+    "Descrição": null,
+    "Preço custo (COP)": 320000,
+    "Valor de venda (COP)": 580000,
+    "ENTRADA": 260000
+  },
+  {
+    "Código": null,
+    "Passeio": "alondra aviario ate 3 pax",
+    "Descrição": null,
+    "Preço custo (COP)": 385000,
+    "Valor de venda (COP)": 580000,
+    "ENTRADA": 195000
+  },
+  {
+    "Código": null,
+    "Passeio": "alondra aviario ate 8 pax",
+    "Descrição": null,
+    "Preço custo (COP)": 555000,
+    "Valor de venda (COP)": 780000,
+    "ENTRADA": 225000
+  },
+  {
+    "Código": null,
+    "Passeio": "alondra aviario ate 14 pax",
+    "Descrição": null,
+    "Preço custo (COP)": 660000,
+    "Valor de venda (COP)": 900000,
+    "ENTRADA": 240000
+  },
+  {
+    "Código": null,
+    "Passeio": "Corona Island",
+    "Descrição": null,
+    "Preço custo (COP)": 633000,
+    "Valor de venda (COP)": 850000,
+    "ENTRADA": 217000
+  },
+  {
+    "Código": null,
+    "Passeio": "isla palma",
+    "Descrição": null,
+    "Preço custo (COP)": 420000,
+    "Valor de venda (COP)": 550000,
+    "ENTRADA": 130000
+  },
+  {
+    "Código": null,
+    "Passeio": "isla palma CHD 04 a 06 anos",
+    "Descrição": null,
+    "Preço custo (COP)": 350000,
+    "Valor de venda (COP)": 420000,
+    "ENTRADA": 70000
+  },
+  {
+    "Código": "CTY102-BOG",
+    "Passeio": "Candelaria + Museu (Básico) (BOG PASS)",
+    "Descrição": "2 Pessoas",
+    "Preço custo (COP)": 422840,
+    "Valor de venda (COP)": 676544,
+    "ENTRADA": 253704
+  }
+]

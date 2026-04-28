@@ -1,0 +1,478 @@
+
+==============================
+FILE: Cópia de Diario TET 01 .xlsx
+==============================
+Sheets found: ['Precificação Simples Nacional', 'Precificação por Produto', 'Saldos e Devoluções Ju', 'Grupo Bora', 'Cópia de Precificação por Produ', 'Controle- Vendas e Comissões', 'Calculadora de Cotação', 'JU_Precificação por Produto', 'Alondra 2025', 'Tour Hernan  ', 'Tour Andrés ', 'Transfers Cartagena ', 'Transfers Bogotá', 'Reservas Sofitel', 'Transfers Cartagena  2025', 'Passeios Diarios', 'Contas á Pagar e Receber ', 'leads site', 'bogota ', 'Medellín', 'Recebimentos Colômbia', 'Créditos e cortesias', 'Sofitel', 'Sabai', ' Coralina', 'paue', 'Islabela', 'Rosario de mar', 'SIbarita', 'Isla palma', 'Fenix', 'bonavida', 'capri', 'Lunatico', 'makani', 'Walking Tour', 'corona', 'Creators', 'concorrencia ', 'Site', 'Vendas Extras']
+
+--- SHEET: Precificação Simples Nacional ---
+Shape: (1861, 23)
+Columns: ['Pedro Resende', 'Unnamed: 1', 'Código', 'Descrição', 'Preço custo (COP)', 'Valor de venda (COP)', 'Preço custo (BRL)', 'IOF', 'Valor após IOF', 'Valor de IOF Bruto', 'Cotação COP', 'Spread', 'Cotação Real', 'Valor SPREAD BRUTO', 'Custo Convertido (US)', 'Preço de venda ', 'Simples Nacional (%)', 'Outros custos diretos (%)', 'Comissão (R$)', 'Margem bruta', 'MARKUP', 'MARKDOWN', 'CLD ']
+Sample data:
+Pedro Resende  Unnamed: 1     Código                             Descrição Preço custo (COP) Valor de venda (COP) Preço custo (BRL)    IOF Valor após IOF Valor de IOF Bruto  Cotação COP  Spread Cotação Real  Valor SPREAD BRUTO  Custo Convertido (US) Preço de venda  Simples Nacional (%) Outros custos diretos (%) Comissão (R$) Margem bruta   MARKUP  MARKDOWN     CLD 
+          NaN         NaN Lancha-001            Veleiro 5 pessoas - Lancha           6395050           10703325.5       9262.820162  0.035    8938.621456         324.198706     0.001370  0.0215     0.001399          207.180361              12.530698     15503.08117                 0.06                       NaN   1248.052202  4992.208807 0.673689  0.402517 0.322014
+          NaN         NaN Lancha-003           Veleiro 5 pessoas - Regular           3670000                  NaN       5315.759845  0.035     5129.70825         186.051595     0.001370  0.0215     0.001399          125.288727               7.200296     9302.579728                 0.06                       NaN    797.363977  3189.455907 0.750000  0.428571 0.342857
+          NaN         NaN DEBCAR-001 8 pessoas - Debora Carvalho - Regular          12140000                  NaN       17767.29658  0.035     17145.4412          621.85538     0.001384  0.0215     0.001414          383.626986              24.265874     26773.53921                 0.06                       NaN   1801.248527  7204.994108 0.506900  0.336386 0.269109
+--------------------
+
+--- SHEET: Precificação por Produto ---
+Shape: (466, 35)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'Unnamed: 14', 'Unnamed: 15', 'Unnamed: 16', 'Unnamed: 17', 'Unnamed: 18', 'Unnamed: 19', 'Unnamed: 20', 'Unnamed: 21', 'Unnamed: 22', 'Unnamed: 23', 'Unnamed: 24', 'Unnamed: 25', 'Unnamed: 26', 'Unnamed: 27', 'Unnamed: 28', 'Unnamed: 29', 'Unnamed: 30', 'Unnamed: 31', 'Unnamed: 32', 'Unnamed: 33', 'Unnamed: 34']
+Sample data:
+     Unnamed: 0 Unnamed: 1 Unnamed: 2 Unnamed: 3        Unnamed: 4           Unnamed: 5            Unnamed: 6        Unnamed: 7 Unnamed: 8     Unnamed: 9        Unnamed: 10 Unnamed: 11 Unnamed: 12  Unnamed: 13        Unnamed: 14           Unnamed: 15     Unnamed: 16          Unnamed: 17               Unnamed: 18 Unnamed: 19 Unnamed: 20         Unnamed: 21  Unnamed: 22              Unnamed: 23 Unnamed: 24 Unnamed: 25 Unnamed: 26 Unnamed: 27 Unnamed: 28     Unnamed: 29          Unnamed: 30 Unnamed: 31 Unnamed: 32        Unnamed: 33       Unnamed: 34
+            NaN        NaN        NaN        NaN      Precificação                  NaN                   NaN               NaN        NaN            NaN                NaN         NaN         NaN          NaN                NaN                   NaN             NaN                  NaN                       NaN         NaN         NaN                 NaN          NaN Formatos de visualização         NaN         NaN    Pesquisa         NaN         NaN             NaN Histórico de vendas          NaN         NaN                NaN               NaN
+DATA da Cotação     Código    Passeio  Descrição Preço custo (COP) Valor de venda (COP) Quantidade de pessoas Preço custo (BRL)        IOF Valor após IOF Valor de IOF Bruto Cotação COP      Spread Cotação Real Valor SPREAD BRUTO Custo Convertido (US) Preço de venda  Simples Nacional (%) Outros custos diretos (%)     ENTRADA         NaN Comissão Jadhe (R$) Margem bruta                   MARKUP    MARKDOWN        CLD   Pesquisa 1  Pesquisa 2  Pesquisa 3 Estabelecimento           Custo 2025       Mês 2       Mês 3 Média venda mensal Vendas acumuladas
+Bogotá BOG PASS        NaN        NaN        NaN               NaN                  NaN                   NaN               NaN        NaN            NaN                NaN         NaN         NaN          NaN                NaN                   NaN             NaN                  NaN                       NaN           0         NaN                 NaN          NaN                      NaN         NaN         NaN         NaN         NaN         NaN             NaN                  NaN         NaN         NaN                NaN               NaN
+--------------------
+
+--- SHEET: Saldos e Devoluções Ju ---
+Shape: (637, 8)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7']
+Sample data:
+         Unnamed: 0       Unnamed: 1                           Unnamed: 2                              Unnamed: 3 Unnamed: 4                                Unnamed: 5        Unnamed: 6       Unnamed: 7
+               inte              NaN                                  NaN                                DEZEMBRO    STATUS                                CONSULTORA  camnbio dia venda camnbio dia pgto
+               Data          Nombre                               Passeio Valor Total em Pesos Colombianos TOTAL   Pagamento                                       NaN               NaN              NaN
+2023-12-06 00:00:00 Silvana Rigolino Walking Tour + Casti VIP 14:00 2PAX                                   310000       PAGO Jadhe/ Ju paga Saldo/ Pax Pagou por pix                 NaN              NaN
+--------------------
+
+--- SHEET: Grupo Bora ---
+Shape: (25, 5)
+Columns: ['GRUPO BORA BORA', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4']
+Sample data:
+GRUPO BORA BORA          Unnamed: 1          Unnamed: 2 Unnamed: 3          Unnamed: 4
+   Bora Bora BC                 NaN                 NaN        NaN                 NaN
+            NaN 2025-04-01 00:00:00 2025-09-25 00:00:00       2026 2026-01-01 00:00:00
+   Precio venta              390000              430000     450000              450000
+--------------------
+
+--- SHEET: Cópia de Precificação por Produ ---
+Shape: (460, 35)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'Unnamed: 14', 'Unnamed: 15', 'Unnamed: 16', 'Unnamed: 17', 'Unnamed: 18', 'Unnamed: 19', 'Unnamed: 20', 'Unnamed: 21', 'Unnamed: 22', 'Unnamed: 23', 'Unnamed: 24', 'Unnamed: 25', 'Unnamed: 26', 'Unnamed: 27', 'Unnamed: 28', 'Unnamed: 29', 'Unnamed: 30', 'Unnamed: 31', 'Unnamed: 32', 'Unnamed: 33', 'Unnamed: 34']
+Sample data:
+     Unnamed: 0 Unnamed: 1 Unnamed: 2 Unnamed: 3        Unnamed: 4           Unnamed: 5            Unnamed: 6        Unnamed: 7 Unnamed: 8     Unnamed: 9        Unnamed: 10 Unnamed: 11 Unnamed: 12  Unnamed: 13        Unnamed: 14           Unnamed: 15     Unnamed: 16          Unnamed: 17               Unnamed: 18 Unnamed: 19  Unnamed: 20         Unnamed: 21  Unnamed: 22              Unnamed: 23 Unnamed: 24 Unnamed: 25 Unnamed: 26 Unnamed: 27 Unnamed: 28     Unnamed: 29          Unnamed: 30 Unnamed: 31 Unnamed: 32        Unnamed: 33       Unnamed: 34
+            NaN        NaN        NaN        NaN      Precificação                  NaN                   NaN               NaN        NaN            NaN                NaN         NaN         NaN          NaN                NaN                   NaN             NaN                  NaN                       NaN         NaN          NaN                 NaN          NaN Formatos de visualização         NaN         NaN    Pesquisa         NaN         NaN             NaN Histórico de vendas          NaN         NaN                NaN               NaN
+DATA da Cotação     Código    Passeio  Descrição Preço custo (COP) Valor de venda (COP) Quantidade de pessoas Preço custo (BRL)        IOF Valor após IOF Valor de IOF Bruto Cotação COP      Spread Cotação Real Valor SPREAD BRUTO Custo Convertido (US) Preço de venda  Simples Nacional (%) Outros custos diretos (%)     ENTRADA          NaN Comissão Jadhe (R$) Margem bruta                   MARKUP    MARKDOWN        CLD   Pesquisa 1  Pesquisa 2  Pesquisa 3 Estabelecimento           Custo 2025       Mês 2       Mês 3 Média venda mensal Vendas acumuladas
+Bogotá BOG PASS        NaN        NaN        NaN               NaN                  NaN                   NaN               NaN        NaN            NaN                NaN         NaN         NaN          NaN                NaN                   NaN             NaN                  NaN                       NaN           0          NaN                 NaN          NaN                      NaN         NaN         NaN         NaN         NaN         NaN             NaN                  NaN         NaN         NaN                NaN               NaN
+--------------------
+
+--- SHEET: Controle- Vendas e Comissões ---
+Shape: (962, 40)
+Columns: ['Data da Venda', 'Data da Viagem', 'Mês da Viagem', 'Código da Cotação', 'Cliente', 'total entrada', 'CUSTO (COP)', 'TET (COP)', 'Cotação COP', 'IOF', 'Valor após IOF', 'Valor de IOF Bruto', 'Spread', 'Cotação Real', 'Valor SPREAD BRUTO', 'Custo Convertido (US)', 'TET (BRL)', 'CUSTO (BRL)', 'Devolução', 'Simples Nacional (%)', 'Outros custos diretos (%)', 'Antes de comision', 'Desconto', 'Lucro Bruto', 'Cupom Afiliado', 'Comissão Afiliado', 'Lucro pós-comissão', 'Comissão Jadhe?', 'Comissão (R$)', 'Lucro Liquido', 'obs', 'Status', 'Nota Fiscal', 'Imposto', 'Unnamed: 34', 'Unnamed: 35', 'Unnamed: 36', 'Unnamed: 37', 'Unnamed: 38', 'Unnamed: 39']
+Sample data:
+Data da Venda Data da Viagem Mês da Viagem Código da Cotação         Cliente  total entrada  CUSTO (COP)  TET (COP)  Cotação COP   IOF  Valor após IOF  Valor de IOF Bruto  Spread  Cotação Real  Valor SPREAD BRUTO Custo Convertido (US)  TET (BRL)  CUSTO (BRL)  Devolução  Simples Nacional (%)  Outros custos diretos (%)  Antes de comision  Desconto  Lucro Bruto Cupom Afiliado  Comissão Afiliado  Lucro pós-comissão Comissão Jadhe?  Comissão (R$)  Lucro Liquido obs Status  Nota Fiscal  Imposto      Unnamed: 34  Unnamed: 35  Unnamed: 36 Unnamed: 37 Unnamed: 38 Unnamed: 39
+   2025-10-07     2025-10-07          out.               NaN Heloísa Delgado            NaN     500000.0   700000.0     0.001404 0.035      716.469623           25.985945  0.0215      0.001435           30.404097              1.049417     351.00   742.455568        NaN                  0.06                        NaN                NaN       NaN  -391.455568            Sim         -39.145557         -352.310011             Sim     -70.462002    -281.848009 NaN     OK         True      NaN Comissão Por Mês          NaN          NaN         NaN         NaN         NaN
+   2025-09-12     2025-10-08          out.               NaN    Ana Oliveira            NaN          NaN        NaN     0.001404 0.035      579.000000           21.000000  0.0215      0.001435           27.448500              0.852189    1000.00   600.000000        NaN                   NaN                        NaN                NaN       NaN   400.000000            Sim          40.000000          360.000000             Sim      72.000000     288.000000 NaN     OK        False      NaN             out.  3296.239998          NaN     Legenda         NaN         NaN
+   2025-10-12     2025-10-09          out.               NaN  Marcus Estrela            NaN          NaN        NaN     0.001404 0.035        0.000000            0.000000  0.0215      0.001435           15.000000                0.0215     193.83     0.000000        NaN                  0.06                        NaN                NaN       NaN   193.830000            NaN                NaN          193.830000             Sim      38.766000     155.064000 NaN     OK        False      NaN             nov.     8139.308          NaN         NaN     Fechado         NaN
+--------------------
+
+--- SHEET: Calculadora de Cotação ---
+Shape: (22, 5)
+Columns: ['Código', 'Serviço', 'Variação', 'Custo Neto (COP)', 'Preço de Venda (COP)']
+Sample data:
+Código           Serviço         Variação  Custo Neto (COP)  Preço de Venda (COP)
+CTY007               NaN              NaN               NaN                   NaN
+CTY007 City Tour 4 horas CARRRO 3 PESSOAS          120000.0              250000.0
+PAS006         Bora Bora               BC          180000.0              350000.0
+--------------------
+
+--- SHEET: JU_Precificação por Produto ---
+Shape: (229, 34)
+Columns: ['DATA da Cotação', 'Unnamed: 1', 'Código', 'Passeio', 'Descrição', 'Precificação', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'Unnamed: 14', 'Unnamed: 15', 'Unnamed: 16', 'Unnamed: 17', 'Unnamed: 18', 'Unnamed: 19', 'Unnamed: 20', 'Unnamed: 21', 'Formatos de visualização', 'Unnamed: 23', 'Unnamed: 24', 'Pesquisa', 'Unnamed: 26', 'Unnamed: 27', 'Unnamed: 28', 'Histórico de vendas ', 'Unnamed: 30', 'Unnamed: 31', 'Unnamed: 32', 'Unnamed: 33']
+Sample data:
+DATA da Cotação  Unnamed: 1 Código            Passeio        Descrição      Precificação           Unnamed: 6            Unnamed: 7        Unnamed: 8 Unnamed: 9    Unnamed: 10        Unnamed: 11 Unnamed: 12 Unnamed: 13  Unnamed: 14        Unnamed: 15           Unnamed: 16     Unnamed: 17          Unnamed: 18  Unnamed: 19   Unnamed: 20  Unnamed: 21 Formatos de visualização Unnamed: 23 Unnamed: 24   Pesquisa Unnamed: 26 Unnamed: 27     Unnamed: 28 Histórico de vendas  Unnamed: 30 Unnamed: 31        Unnamed: 32       Unnamed: 33
+            NaN         NaN    NaN                NaN              NaN Preço custo (COP) Valor de venda (COP) Quantidade de pessoas Preço custo (BRL)        IOF Valor após IOF Valor de IOF Bruto Cotação COP      Spread Cotação Real Valor SPREAD BRUTO Custo Convertido (US) Preço de venda  Simples Nacional (%) Desconto (%) Comissão (R$) Margem bruta                   MARKUP    MARKDOWN        CLD  Pesquisa 1  Pesquisa 2  Pesquisa 3 Estabelecimento                Mês 1       Mês 2       Mês 3 Média venda mensal Vendas acumuladas
+           2025         NaN TRS001 Transfer in ou out CARRRO 3 PESSOAS             55000               140000                     1         79.663976      0.035      76.875737           2.788239     0.00137      0.0215     0.001399          16.652828              0.129084      202.781029                 0.06          NaN     24.623411    86.326781                 1.545455    0.607143         NaN        NaN         NaN         NaN             NaN                  NaN         NaN         NaN                NaN                 0
+           2025         NaN TRS002 Transfer in ou out        VAN 8 PAX            145000               210000                     1        210.023209      0.035     202.672397           7.350812     0.00137      0.0215     0.001399          19.357457              0.305131      304.171544                 0.06          NaN     18.829667    57.068375                 0.448276    0.309524     0.28381        NaN         NaN         NaN             NaN                  NaN         NaN         NaN                NaN                 0
+--------------------
+
+--- SHEET: Alondra 2025 ---
+Shape: (39, 21)
+Columns: ['ALONDRA 2026', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'ALONDRA 2025', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'Unnamed: 14', 'Unnamed: 15', 'Unnamed: 16', 'Unnamed: 17', 'Unnamed: 18', 'Unnamed: 19', 'Unnamed: 20']
+Sample data:
+      ALONDRA 2026       Unnamed: 1 Unnamed: 2 Unnamed: 3      Unnamed: 4      Unnamed: 5 Unnamed: 6  Unnamed: 7       ALONDRA 2025       Unnamed: 9 Unnamed: 10 Unnamed: 11     Unnamed: 12     Unnamed: 13 Unnamed: 14  Unnamed: 15  Unnamed: 16  Unnamed: 17  Unnamed: 18 Unnamed: 19  Unnamed: 20
+Transfer in ou out              NaN        NaN        NaN             NaN             NaN        NaN         NaN Transfer in ou out              NaN         NaN         NaN             NaN             NaN         NaN          NaN          NaN          NaN          NaN         NaN          NaN
+               NaN CARRRO 3 PESSOAS  VAN 8 PAX VAN 14 Pax SPRINTER 18 PAX MICROBUS 26 PAX BUS 40 PAX         NaN                NaN CARRRO 3 PESSOAS   VAN 8 PAX  VAN 14 Pax SPRINTER 18 PAX MICROBUS 26 PAX  BUS 40 PAX          NaN          NaN          NaN          NaN         NaN          NaN
+              neto            61000     160000     187000          220000          286000     420000         NaN               neto            55000      145000      170000          200000          260000      380000          NaN          NaN          NaN          NaN         NaN          NaN
+--------------------
+
+--- SHEET: Tour Hernan   ---
+Shape: (34, 5)
+Columns: ['SALDOS HERNAN ', 'Unnamed: 1', 'SALDOS HERNAN .1', 'Geral', 'Status']
+Sample data:
+SALDOS HERNAN        Unnamed: 1                   SALDOS HERNAN .1      Geral Status
+    2023-08-30 Marina Ferreira  Walking Tour + Cast  2PAX - Hernán 260.000COP   PAGO
+    2023-09-01      Bruna Cantu    Walking + Cast 2 PAX - Andrés   310.000COP   PAGO
+    2023-09-05     Thais Santos    Walking + Cast 2 PAX - Andrés   310.000COP   PAGO
+--------------------
+
+--- SHEET: Tour Andrés  ---
+Shape: (74, 5)
+Columns: ['SALDOS ANDRÉS', 'Unnamed: 1', 'SALDOS ANDRÉS.1', 'SALDOS ANDRÉS.2', 'Unnamed: 4']
+Sample data:
+SALDOS ANDRÉS       Unnamed: 1                                        SALDOS ANDRÉS.1 SALDOS ANDRÉS.2 Unnamed: 4
+   2023-11-28   Vanessa Marani                        Walking + Cast 2 PAX - Andrés        310.000COP       PAGO
+   2023-12-04   Samily Goersch                        Walking + Cast 2 PAX - Andrés        310.000COP  Cancelado
+   2023-12-06 Silvana Rigolino Walking Tour + Castillo San Felipe VIP 14:00 2PAX 2024      310.000COP       PAGO
+--------------------
+
+--- SHEET: Transfers Cartagena  ---
+Shape: (125, 14)
+Columns: ['Transfers Cartagena', 'Unnamed: 1', 'Unnamed: 2', 'Agosto', 'Unnamed: 4', 'Status', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13']
+Sample data:
+Transfers Cartagena         Unnamed: 1                   Unnamed: 2      Agosto  Unnamed: 4    Status  Unnamed: 6  Unnamed: 7                                        Unnamed: 8       Unnamed: 9 Unnamed: 10 Unnamed: 11 Unnamed: 12 Unnamed: 13
+               Data            Nombre                       Passeio  Total COP          NaN Pagamento         NaN         NaN                                          SERVICIO AUTO / CAMIONETA         VAN         VAN    MICROBUS         BUS
+2023-08-04 00:00:00 Ervin Neto - 4 pax Transfer in Aeroporto- Hotel         NaN    180000.0    110000         NaN         NaN                                               NaN         3 sillas    8 SILLAS   14 SILLAS   18 SILLAS      40 PAX
+2023-08-08 00:00:00 Ana Assis - 1 pax  Transfer in Aeroporto- Hotel         NaN    110000.0     45000         NaN         NaN Transfer Aeropuerto / Hoteles Centro o Bocagrande         $ 45.000   $ 110.000   $ 150.000   $ 170.000   $ 220.000
+--------------------
+
+--- SHEET: Transfers Bogotá ---
+Shape: (34, 6)
+Columns: ['Transfers Bogotá', 'Unnamed: 1', 'Unnamed: 2', 'Agosto', 'Unnamed: 4', 'Status']
+Sample data:
+   Transfers Bogotá        Unnamed: 1                    Unnamed: 2                                  Agosto Unnamed: 4    Status
+               Data           Nombre                        Passeio Valor Total em Pesos Colombianos TOTAL         NaN Pagamento
+2023-08-06 00:00:00 Ana Assis - 1 pax  Transfer in Aeroporto- Hotel                                     NaN     110000      PAGO
+2023-08-08 00:00:00 Ana Assis - 1 pax Transfer out Hotel- Aeroporto                                     NaN     110000      PAGO
+--------------------
+
+--- SHEET: Reservas Sofitel ---
+Shape: (64, 12)
+Columns: ['Reservas Sofitel', 'Unnamed: 1', 'Unnamed: 2', 'Noviembre ', 'Unnamed: 4', 'Status', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11']
+Sample data:
+   Reservas Sofitel  Unnamed: 1                     Unnamed: 2                              Noviembre  Unnamed: 4                                 Status  Unnamed: 6  Unnamed: 7 Unnamed: 8  Unnamed: 9 Unnamed: 10 Unnamed: 11
+               Data     Nombre                         Passeio Valor Total em Pesos Colombianos TOTAL         NaN                              Pagamento         NaN         NaN  Pendiente Solicitado  Confirmada       Hecho 
+2023-11-07 00:00:00 Fe Theodoro Sofitel Baru Casablanca 2 pax                                      NaN        NaN Fue solicitado 11/02/2023) - Realizado         NaN         NaN        NaN         NaN         NaN         NaN
+2023-11-07 00:00:00 Fe Theodoro   Baru Transfer Até 03 Pessoas                                     NaN        NaN                  Pendiente - Realizado         NaN         NaN        NaN         NaN         NaN         NaN
+--------------------
+
+--- SHEET: Transfers Cartagena  2025 ---
+Shape: (34, 14)
+Columns: ['Data', 'Nombre ', 'Passeio', 'Valor Total em Pesos Colombianos TOTAL ', 'Unnamed: 4', 'Pagamento', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13']
+Sample data:
+               Data                     Nombre                                   Passeio Valor Total em Pesos Colombianos TOTAL   Unnamed: 4 Pagamento  Unnamed: 6  Unnamed: 7 Unnamed: 8 Unnamed: 9 Unnamed: 10 Unnamed: 11 Unnamed: 12 Unnamed: 13
+2023-09-02 00:00:00 Solange Cavalcante - 2 pax              Transfer in Aeroporto- Hotel                                     NaN    110000.0     45000         NaN         NaN        NaN        NaN         NaN         NaN         NaN         NaN
+2023-09-06 00:00:00 Solange Cavalcante - 2 pax             Transfer out Hotel- Aeroporto                                     NaN    110000.0     45000         NaN         NaN        NaN        NaN         NaN         NaN         NaN         NaN
+2023-09-12 00:00:00       Camila Campos - 2 pax Transfer Hotel -  Aviario Até 03 Pessoas                                     NaN    500000.0    300000         NaN         NaN        NaN        NaN         NaN         NaN         NaN         NaN
+--------------------
+
+--- SHEET: Passeios Diarios ---
+Shape: (486, 12)
+Columns: ['Reservas semanales ', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Status', 'Alessandra', 'Jadhe', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11']
+Sample data:
+Reservas semanales       Unnamed: 1     Unnamed: 2 Unnamed: 3 Unnamed: 4                                                                                     Status  Alessandra  Jadhe Unnamed: 8  Unnamed: 9 Unnamed: 10 Unnamed: 11
+               Data         Nombre         Passeio   Revisado        NaN                                                                               Observações          NaN    NaN  Pendiente Solicitado  Confirmada       Hecho 
+2023-11-29 00:00:00 Vanessa Marani     PAU´E 2 pax        NaN        Sim Confirmada - O pax paga saldo no dia do passeio- Voucher enviado Confirmado por Alessandra         NaN    NaN        NaN         NaN         NaN         NaN
+2023-11-30 00:00:00 Vanessa Marani  Pao Pao 2 pax         NaN        Sim                 Confirmada - O pax pagou saldo - Voucher enviado Confirmado por Alessandra         NaN    NaN        NaN         NaN         NaN         NaN
+--------------------
+
+--- SHEET: Contas á Pagar e Receber  ---
+Shape: (109, 28)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Recebimento', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Pagamento', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'Unnamed: 14', 'Unnamed: 15', 'Unnamed: 16', 'Unnamed: 17', 'Unnamed: 18', 'Unnamed: 19', 'Unnamed: 20', 'Unnamed: 21', 'Unnamed: 22', 'Unnamed: 23', 'Unnamed: 24', 'Unnamed: 25', 'Unnamed: 26', 'Unnamed: 27']
+Sample data:
+         Unnamed: 0      Unnamed: 1          Unnamed: 2 Unnamed: 3           Unnamed: 4  Unnamed: 5         Recebimento     Unnamed: 7          Unnamed: 8         Unnamed: 9        Pagamento           Unnamed: 11    Unnamed: 12          Unnamed: 13   Unnamed: 14 Unnamed: 15     Unnamed: 16        Unnamed: 17    Unnamed: 18 Unnamed: 19 Unnamed: 20 Unnamed: 21 Unnamed: 22 Unnamed: 23 Unnamed: 24 Unnamed: 25 Unnamed: 26 Unnamed: 27
+   Data Recebimento Mês Recebimento         Data Viagem Mês Viagem   Cliente/Fornecedor   Descrição Valor Recebido(COP) Taxa de Câmbio Valor Recebido(BRL) Status Recebimento Status Pagamento Valor Fornecedor(COP) Taxa de Câmbio Valor Pago Real(BRL) Comissão(BRL)         NaN Á Receber (BRL) Fornecedores (BRL) Comissão (BRL)         NaN         IOF      Spread         NaN         NaN         NaN         NaN         NaN         NaN
+2025-08-10 00:00:00          agosto 2025-08-10 00:00:00     agosto Renan Felix - 02 pax Transfer in              150000        0.00147               220.5     Recebido - PIX             Pago                 55000        0.00147            85.418025     27.016395         NaN               0        17869.15712   -3399.599425         NaN       0.035      0.0215         NaN         NaN         NaN         NaN         NaN         NaN
+2025-08-12 00:00:00          agosto 2025-08-12 00:00:00     agosto Renan Felix - 02 pax   Bora Bora                 NaN        0.00147                   0     Recebido - PIX             Pago                560000        0.00147             869.7108    -173.94216         NaN             NaN                NaN            NaN         NaN         NaN         NaN         NaN         NaN         NaN         NaN         NaN         NaN
+--------------------
+
+--- SHEET: leads site ---
+Shape: (1, 4)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3']
+Sample data:
+Unnamed: 0 Unnamed: 1 Unnamed: 2 Unnamed: 3
+     nome       data      fechou      valor
+--------------------
+
+--- SHEET: bogota  ---
+Shape: (75, 12)
+Columns: ['PRIVADOS BOG PASS', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'PRIVADOS IMPULSE', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11']
+Sample data:
+                                    PRIVADOS BOG PASS  Unnamed: 1  Unnamed: 2  Unnamed: 3  Unnamed: 4  Unnamed: 5  Unnamed: 6                                       PRIVADOS IMPULSE Unnamed: 8  Unnamed: 9  Unnamed: 10  Unnamed: 11
+basic - candaelaria +museo c transporte e guia port           NaN         NaN         NaN         NaN         NaN         NaN basic - candaelaria + museo c transporte e guia port          NaN         NaN          NaN          NaN
+                                                  NaN         1.0         2.0         3.0         4.0         NaN         NaN                                                    NaN     01 pax         2.0       3.0000          4.0
+                                           Precio tet    880000.0    485000.0    435000.0    453000.0         NaN         NaN                                             Precio tet     880000    485000.0  460000.0033     380000.0
+--------------------
+
+--- SHEET: Medellín ---
+Shape: (46, 12)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'PRIVADOS IMPULSE', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11']
+Sample data:
+                      Unnamed: 0  Unnamed: 1  Unnamed: 2  Unnamed: 3  Unnamed: 4  Unnamed: 5  Unnamed: 6                                       PRIVADOS IMPULSE Unnamed: 8  Unnamed: 9  Unnamed: 10  Unnamed: 11
+bog pass mdellin - GRUPALES 2026         NaN         NaN         NaN         NaN         NaN         NaN basic - candaelaria + museo c transporte e guia port          NaN         NaN          NaN          NaN
+                      Comuna 13          NaN         NaN         NaN         NaN         NaN         NaN                                                    NaN     01 pax         2.0       3.0000          4.0
+                             NaN      2025.0      2026.0         NaN         NaN         NaN         NaN                                             Precio tet     880000    485000.0  460000.0033     380000.0
+--------------------
+
+--- SHEET: Recebimentos Colômbia ---
+Shape: (59, 17)
+Columns: ['Unnamed: 0', 'Nome do pax ', 'Data Pagamento', 'Data Viagem ', 'PAX', 'passeio', 'Pagamento', 'preço neto', 'valor total', 'Valor link ', 'Valor recebido', 'Comissão BOLD', 'Entrada', 'valor comissao tet', 'valor comissao jadhe', 'Metodo de recebimento ', 'Unnamed: 16']
+Sample data:
+ Unnamed: 0                       Nome do pax  Data Pagamento Data Viagem   PAX             passeio Pagamento  preço neto  valor total  Valor link   Valor recebido  Comissão BOLD  Entrada  valor comissao tet  valor comissao jadhe Metodo de recebimento  Unnamed: 16
+        NaN                Youly Neri R Seixas     2025-03-01   2025-03-02  NaN                 NaN      BOLD         NaN          NaN          NaN             NaN            NaN      NaN                 NaN                   NaN                    NaN         NaN
+        NaN Gabriela Miranda (Felipe de Couto)     2025-03-09          NaT  2.0 walking tour andres      BOLD    422000.0     650000.0     682500.0        640718.0        41782.0      NaN            218718.0               43743.6       link bold com 5%         NaN
+        NaN                      carlos ziling     2025-03-12   2025-03-13  4.0  walking tour herna      BOLD    740000.0      12000.0    1260000.0       1183693.0        76307.0      NaN            443693.0               88738.6                    NaN         NaN
+--------------------
+
+--- SHEET: Créditos e cortesias ---
+Shape: (22, 26)
+Columns: ['      ', 'valor', 'Crédito ', 'Motivo', 'Observação', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'Unnamed: 14', 'Unnamed: 15', 'Unnamed: 16', 'Unnamed: 17', 'Unnamed: 18', 'Unnamed: 19', 'Unnamed: 20', 'Unnamed: 21', 'Unnamed: 22', 'Unnamed: 23', 'Unnamed: 24', '   mkhkvvcv  ']
+Sample data:
+                  valor     Crédito                                    Motivo     Observação  Unnamed: 5  Unnamed: 6  Unnamed: 7  Unnamed: 8  Unnamed: 9  Unnamed: 10  Unnamed: 11  Unnamed: 12  Unnamed: 13  Unnamed: 14  Unnamed: 15  Unnamed: 16  Unnamed: 17  Unnamed: 18  Unnamed: 19 Unnamed: 20  Unnamed: 21  Unnamed: 22 Unnamed: 23  Unnamed: 24     mkhkvvcv  
+Rosário de Mar 560000.0 2 cortesias  Erro do Wilson, dia do evento em Rosário Usar em abril          NaN         NaN         NaN         NaN         NaN          NaN          NaN          NaN          NaN          NaN          NaN          NaN          NaN          NaN          NaN         NaN          NaN          NaN         NaN          NaN            NaN
+           NaN      NaN          NaN                                      NaN            NaN         NaN         NaN         NaN         NaN         NaN          NaN          NaN          NaN          NaN          NaN          NaN          NaN          NaN          NaN          NaN     zaAAAAA          NaN          NaN         NaN          NaN            NaN
+           NaN      NaN          NaN                                      NaN            NaN         NaN         NaN         NaN         NaN         NaN          NaN          NaN          NaN          NaN          NaN          NaN          NaN          NaN          NaN          NaN         NaN          NaN          NaN                      NaN            NaN
+--------------------
+
+--- SHEET: Sofitel ---
+Shape: (14, 5)
+Columns: ['sofitel baru', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4']
+Sample data:
+sofitel baru          Unnamed: 1      Unnamed: 2  Unnamed: 3 Unnamed: 4
+         NaN 2025-04-01 00:00:00 chd 3 a 12 anos      2026.0   2026 chd
+Precio venta              540000          370000    570000.0     400000
+       Saldo              375000          175000    375000.0     175000
+--------------------
+
+--- SHEET: Sabai ---
+Shape: (19, 3)
+Columns: ['Sabai', 'Unnamed: 1', 'Unnamed: 2']
+Sample data:
+       Sabai          Unnamed: 1          Unnamed: 2
+       Sabai                 NaN                 NaN
+         NaN 2025-04-01 00:00:00 2025-09-25 00:00:00
+Precio venta              500000              520000
+--------------------
+
+--- SHEET:  Coralina ---
+Shape: (13, 4)
+Columns: ['Coralina', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3']
+Sample data:
+       Coralina          Unnamed: 1          Unnamed: 2  Unnamed: 3
+Coralina Isleño                 NaN                 NaN         NaN
+            NaN 2025-04-01 00:00:00 2025-09-25 00:00:00      2026.0
+   Precio venta              420000              430000    450000.0
+--------------------
+
+--- SHEET: paue ---
+Shape: (14, 7)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6']
+Sample data:
+Unnamed: 0 Unnamed: 1 Unnamed: 2 Unnamed: 3 Unnamed: 4          Unnamed: 5            Unnamed: 6
+     Pa´ue        NaN        NaN        NaN        NaN                 NaN                   NaN
+       NaN        adt      chd     2026 adt   chd 2026 2026-01-01 00:00:00 chd 04 a 07 anos 2026
+Precio tet     450000     320000     490000     370000              490000                370000
+--------------------
+
+--- SHEET: Islabela ---
+Shape: (13, 4)
+Columns: ['Islabela', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3']
+Sample data:
+    Islabela          Unnamed: 1          Unnamed: 2  Unnamed: 3
+    Islabela                 NaN                 NaN         NaN
+         NaN 2025-04-01 00:00:00 2025-09-25 00:00:00      2026.0
+Precio venta              390000              430000    450000.0
+--------------------
+
+--- SHEET: Rosario de mar ---
+Shape: (7, 7)
+Columns: ['Tequendama', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6']
+Sample data:
+    Tequendama          Unnamed: 1     Unnamed: 2          Unnamed: 3 Unnamed: 4  Unnamed: 5 Unnamed: 6
+Rosario de Mar                 NaN            NaN                 NaN        NaN         NaN        NaN
+           NaN 2025-04-25 00:00:00 chd 4 a 7 anos 2025-09-25 00:00:00     chd 25      2026.0   chd 2026
+  Precio venta              420000         320000              430000     370000    450000.0     370000
+--------------------
+
+--- SHEET: SIbarita ---
+Shape: (13, 3)
+Columns: ['Sibarita', 'Unnamed: 1', 'Unnamed: 2']
+Sample data:
+              Sibarita          Unnamed: 1  Unnamed: 2
+Sunset Sibarita Master                 NaN         NaN
+                   NaN 2025-04-01 00:00:00      2026.0
+          Precio venta              230000    250000.0
+--------------------
+
+--- SHEET: Isla palma ---
+Shape: (7, 6)
+Columns: ['marina tour', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5']
+Sample data:
+ marina tour          Unnamed: 1          Unnamed: 2     Unnamed: 3  Unnamed: 4          Unnamed: 5
+  isla palma                 NaN                 NaN            NaN         NaN                 NaN
+         NaN 2025-07-01 00:00:00 2025-09-25 00:00:00 chd 4 a 6 anos      2026.0 2026 chd 4 a 6 anos
+Precio venta              350000              530000         400000    550000.0              420000
+--------------------
+
+--- SHEET: Fenix ---
+Shape: (26, 3)
+Columns: ['Fenix', 'Unnamed: 1', 'Unnamed: 2']
+Sample data:
+       Fenix          Unnamed: 1 Unnamed: 2
+        Cena                 NaN        NaN
+         NaN 2025-04-01 00:00:00       2026
+Precio venta              300000     320000
+--------------------
+
+--- SHEET: bonavida ---
+Shape: (13, 6)
+Columns: ['bonavida', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5']
+Sample data:
+      bonavida  Unnamed: 1          Unnamed: 2       Unnamed: 3  Unnamed: 4 Unnamed: 5
+catamaan islas         NaN                 NaN              NaN         NaN        NaN
+           NaN         NaN 2025-09-25 00:00:00 chd 07 a 14 anos      2026.0        chd
+  Precio venta         NaN              490000           430000    510000.0     450000
+--------------------
+
+--- SHEET: capri ---
+Shape: (15, 3)
+Columns: ['ecoway', 'Unnamed: 1', 'Unnamed: 2']
+Sample data:
+    ecoway Unnamed: 1       Unnamed: 2
+     Capri        NaN              NaN
+       NaN        adt nino 05a 09 anos
+Precio tet     490000           380000
+--------------------
+
+--- SHEET: Lunatico ---
+Shape: (16, 15)
+Columns: ['Lunatico 2025 valores por pessoa', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'ALONDRA 2025']
+Sample data:
+Lunatico 2025 valores por pessoa       Unnamed: 1                    Unnamed: 2          Unnamed: 3        Unnamed: 4           Unnamed: 5          Unnamed: 6 Unnamed: 7 Unnamed: 8 Unnamed: 9 Unnamed: 10 Unnamed: 11 Unnamed: 12 Unnamed: 13  ALONDRA 2025
+                             NaN clases de cocina tour a bazurto + clase cocina CLASE SALSA PRIVADA CLASE SALSA GRUPO CATA RON Y CHOCOLATE CERVEJAS ARTESANAIS        NaN        NaN        NaN         NaN         NaN         NaN         NaN           NaN
+                             NaN      1 a 10 pax                            NaN       ATE 6 PESSOAS               NaN                  NaN                 NaN        NaN        NaN        NaN         NaN         NaN         NaN         NaN           NaN
+                            neto           275000                        412500              561000             93500               240000              160000        NaN        NaN        NaN         NaN         NaN         NaN         NaN           NaN
+--------------------
+
+--- SHEET: makani ---
+Shape: (9, 15)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'Unnamed: 14']
+Sample data:
+Unnamed: 0 Unnamed: 1       Unnamed: 2 Unnamed: 3            Unnamed: 4  Unnamed: 5  Unnamed: 6  Unnamed: 7  Unnamed: 8  Unnamed: 9  Unnamed: 10  Unnamed: 11  Unnamed: 12  Unnamed: 13 Unnamed: 14
+    makani        NaN              NaN        NaN                   NaN         NaN         NaN         NaN         NaN         NaN          NaN          NaN          NaN          NaN         NaN
+       NaN        adt nino 04a 11 anos   adt 2026 2026 nino 04a 11 anos         NaN         NaN         NaN         NaN         NaN          NaN          NaN          NaN          NaN         NaN
+Precio tet     420000           380000     450000                390000         NaN         NaN         NaN         NaN         NaN          NaN          NaN          NaN          NaN         NaN
+--------------------
+
+--- SHEET: Walking Tour ---
+Shape: (24, 11)
+Columns: ['Hernan Reales', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Andrés', 'Unnamed: 10']
+Sample data:
+Hernan Reales          Unnamed: 1  Unnamed: 2  Unnamed: 3  Unnamed: 4  Unnamed: 5  Unnamed: 6  Unnamed: 7  Unnamed: 8 Andrés Unnamed: 10
+ Precio venta                 NaN         NaN         NaN         NaN         NaN         NaN         NaN         NaN    NaN         NaN
+          NaN 2025-04-01 00:00:00         NaN         NaN         NaN         NaN         NaN         NaN         NaN    NaN         NaN
+        1 PAX              500000         NaN         NaN         NaN         NaN         NaN         NaN         NaN    NaN         NaN
+--------------------
+
+--- SHEET: corona ---
+Shape: (9, 15)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'Unnamed: 14']
+Sample data:
+Unnamed: 0 Unnamed: 1  Unnamed: 2  Unnamed: 3  Unnamed: 4  Unnamed: 5  Unnamed: 6 Unnamed: 7  Unnamed: 8  Unnamed: 9  Unnamed: 10  Unnamed: 11  Unnamed: 12  Unnamed: 13 Unnamed: 14
+    corona        NaN         NaN         NaN         NaN         NaN         NaN        NaN         NaN         NaN          NaN          NaN          NaN          NaN         NaN
+       NaN        adt      2026.0         NaN         NaN         NaN         NaN        NaN         NaN         NaN          NaN          NaN          NaN          NaN         NaN
+Precio tet     850000    870000.0         NaN         NaN         NaN         NaN        NaN         NaN         NaN          NaN          NaN          NaN          NaN         NaN
+--------------------
+
+--- SHEET: Creators ---
+Shape: (3, 5)
+Columns: ['Nome', 'Data da viagem', 'Produto', 'Cortesia', 'Lucro TET']
+Sample data:
+           Nome Data da viagem   Produto Cortesia              Lucro TET
+Marcela Santana     2025-04-15 Bora Bora      SIM COP 649.500 = R$946,90
+       Charlene            NaT       NaN      NaN                    NaN
+   Luiza Rabelo            NaT       NaN      NaN                    NaN
+--------------------
+
+--- SHEET: concorrencia  ---
+Shape: (14, 5)
+Columns: [datetime.datetime(2025, 9, 1, 0, 0), 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4']
+Sample data:
+2025-09-01 00:00:00            Unnamed: 1   Unnamed: 2 Unnamed: 3  Unnamed: 4
+                NaN lucas carvalho em 10x juan ballena        tet         NaN
+       coralina vip                     0          914        NaN         NaN
+           bora vip                   799            0        NaN         NaN
+--------------------
+
+--- SHEET: Site ---
+Shape: (8, 2)
+Columns: ['Mês', 'Conversas iniciadas ']
+Sample data:
+       Mês  Conversas iniciadas 
+2025-06-25                     2
+2025-07-25                     0
+2025-08-25                    11
+--------------------
+
+--- SHEET: Vendas Extras ---
+Shape: (33, 18)
+Columns: ['Produto', 'Data', 'Valor', 'Comissão ', 'Cliente', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'Unnamed: 14', 'Unnamed: 15', 'Unnamed: 16', 'Unnamed: 17']
+Sample data:
+     Produto       Data  Valor  Comissão          Cliente Unnamed: 5 Unnamed: 6           Unnamed: 7         Unnamed: 8          Unnamed: 9         Unnamed: 10    Unnamed: 11 Unnamed: 12  Unnamed: 13  Unnamed: 14  Unnamed: 15 Unnamed: 16 Unnamed: 17
+E-sim Online 2025-11-06  30.00        NaN    Lorena Costa        NaN        NaN            afiliados            cliente       data da venda      data da viagem Valor da venda    afiliado          NaN          NaN          NaN         NaN         NaN
+      E-book 2025-10-23  82.24        NaN    Ingrid Mello        NaN        NaN planejar para chegar   isabela marcuzzo 2026-01-03 00:00:00 2026-02-05 00:00:00         989.57      24.816          NaN          NaN          NaN         NaN         NaN
+      E-book 2025-08-23  82.24        NaN Melina AGÊNCIA         NaN        NaN planejar para chegar Juliana nascimento 2026-01-02 00:00:00 2026-01-02 00:00:00        1387.14          35          NaN          NaN          NaN         NaN         NaN
+--------------------
+
+==============================
+FILE: CONFIRMACIONES 2025.xlsx
+==============================
+Sheets found: ['CONF ', 'Voucher', 'Voucher OLD', 'Datos', 'TARIFAS ', 'Historico TARIFAS ']
+
+--- SHEET: CONF  ---
+Shape: (61, 5)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4']
+Sample data:
+         Unnamed: 0 Unnamed: 1                     Unnamed: 2                              Unnamed: 3 Unnamed: 4
+                NaN        NaN                            NaN                                       2        NaN
+Titular da Reserva:        NaN                            NaN                                     NaN        NaN
+               Data    Passeio Valor em Pesos Colombianos P/P Valor Total em Pesos Colombianos TOTAL         NaN
+--------------------
+
+--- SHEET: Voucher ---
+Shape: (398, 10)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9']
+Sample data:
+ Unnamed: 0                    Unnamed: 1 Unnamed: 2  Unnamed: 3  Unnamed: 4 Unnamed: 5 Unnamed: 6  Unnamed: 7 Unnamed: 8  Unnamed: 9
+        NaN Voucher The Experience Travel        NaN         NaN         NaN        NaN        NaN         NaN        NaN         NaN
+        NaN           Titular da Reserva:        NaN         0.0         NaN        NaN        NaN         NaN        NaN         NaN
+        NaN                             2        NaN         NaN         NaN        NaN        NaN         NaN        NaN         NaN
+--------------------
+
+--- SHEET: Voucher OLD ---
+Shape: (187, 10)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9']
+Sample data:
+ Unnamed: 0                    Unnamed: 1 Unnamed: 2           Unnamed: 3  Unnamed: 4 Unnamed: 5 Unnamed: 6  Unnamed: 7 Unnamed: 8  Unnamed: 9
+        NaN Voucher The Experience Travel        NaN                  NaN         NaN        NaN        NaN         NaN        NaN         NaN
+        NaN           Titular da Reserva:        NaN Luis Domingo Blasini         NaN        NaN        NaN         NaN        NaN         NaN
+        NaN                             2        NaN                  NaN         NaN        NaN        NaN         NaN        NaN         NaN
+--------------------
+
+--- SHEET: Datos ---
+Shape: (36, 7)
+Columns: ['Unnamed: 0', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6']
+Sample data:
+Unnamed: 0 Unnamed: 1  Unnamed: 2 Unnamed: 3 Unnamed: 4  Unnamed: 5  Unnamed: 6
+       NaN Entrada PP Entrada TOT      Saldo   SaldoTOT         NaN         NaN
+       NaN     100000      200000      80000     160000         NaN         0.0
+       NaN     350000      700000          0          0         NaN         0.0
+--------------------
+
+--- SHEET: TARIFAS  ---
+Shape: (221, 15)
+Columns: ['1', ' $  2 ', '3', ' $  4 ', '5', ' $  6 ', '7', ' $  8 ', '9', ' $  10 ', 'Unnamed: 10', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'Unnamed: 14']
+Sample data:
+                       1  $  2      3   $  4      5                                                                                                                                                                                                                                                                                                                                                                                                                                                          $  6                                                                                                                                         7       $  8            9  $  10   Unnamed: 10  Unnamed: 11  Unnamed: 12 Unnamed: 13 Unnamed: 14
+                     NaN    TET   PVP ENTRADA  NETO                                                                                                                                                                                                                                                                                                                                                                                                                                                         TEXTOS                                                                                                                                    LOCAL VALOR TAXAS TEXTO TAXAS    HORA          NaN          NaN          NaN     Voucher       taxas
+                       -      0     0       0     0                                                                                                                                                                                                                                                                                                                                                                                                                                                              0                                                                                                                                        0           0         NaN     NaN          NaN          NaN          NaN         NaN         NaN
+Aluguel De Moto Elétrica 160000 70000  104000 56000 Para passear sem passar calor e curtir o melhor de Cartagena em grande estilo.\n \n Apresentar-se na hora reservada na Cidade Amuralhada, Calle 2a de Badillo 36 – 54 - 58 P 1 emabixo do hostal Badillo \n \n Inclui\n Passeio de 60min\n Capacete\n Treinamento – tempo não descontado do tour\n Hidratação\n \n Valor do saldo a pagar:\n Na hora de realizar o registro em Ecoway realizar o pagamento de COP 56.000 referente ao aluguel para uma pessoa. Apresentar-se na Cidade Amuralhada, Calle 2a de Badillo 36 – 54 - 58 P 1 emabixo do hostal Badillo \n Diagonal ao Restaurante La Vitrola           0         NaN     NaN          NaN          NaN          NaN         NaN         NaN
+--------------------
+
+--- SHEET: Historico TARIFAS  ---
+Shape: (262, 12)
+Columns: ['Unnamed: 0', datetime.datetime(2024, 1, 1, 0, 0), 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', '2024-2025', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11']
+Sample data:
+              Unnamed: 0 2024-01-01 00:00:00 Unnamed: 2 Unnamed: 3 Unnamed: 4 2024-2025 Unnamed: 6 Unnamed: 7 Unnamed: 8 Unnamed: 9 Unnamed: 10 Unnamed: 11
+                     NaN                 TET        PVP    ENTRADA       NETO       TET        PVP    ENTRADA       NETO     Activo Data inicio    Data fim
+                       -                   0          0          0          0         0          0          0          0        NaN         NaN         NaN
+Aluguel De Moto Elétrica              160000      70000     104000      56000    160000      70000     104000      56000        NaN         NaN         NaN
+--------------------

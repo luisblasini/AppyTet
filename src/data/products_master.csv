@@ -1,0 +1,108 @@
+﻿ID,Passeio,Ciudad,Descricao,Valor_venda_COP,Preco_custo_COP,ENTRADA,Local,Hora,Taxas_valor,Taxas_info,Comentarios
+PROD-001,city tour imperdíveis - manhã,Cartagena,Regular,300000.0,119200.0,180800.0,,,0,,
+PROD-002,city tour bairros inconicos - tarde,Cartagena,Regular,300000.0,119200.0,180800.0,,,0,,
+PROD-003,Catedral de Sal  (BOG PASS),Bogotá,Regular,380000.0,263200.0,116800.0,,,0,,
+PROD-004,Catedral de Sal + Guatavita  (BOG PASS),Bogotá,Regular,600000.0,343200.0,256800.0,,,0,,
+PROD-005,Finca Cafeteira (Grupal) (BOG PASS),Bogotá,Regular,650000.0,343200.0,306800.0,,,0,,
+PROD-006,Transfer in - DIURNO - 06am -09pm (bog pass),Bogotá,Carro 3 Pessoas,360000.0,112000.0,248000.0,,,0,,
+PROD-007,Transfer in - DIURNO - 06am -09pm (bog pass),Bogotá,VAN 4-6 PAX,550000.0,173600.0,376400.0,,,0,,
+PROD-008,Transfer in - DIURNO - 06am - 09pm (bog pass),Bogotá,VAN 7-10 Pax,770000.0,260800.0,509200.0,,,0,,
+PROD-009,Transfer in - NOTURNO - 06am - 09pm (bog pass),Bogotá,Carro 3 Pessoas,360000.0,127200.0,232800.0,,,0,,
+PROD-010,Transfer in - NOTURNIO - 06am - 09pm (bog pass),Bogotá,VAN 4-6 PAX,550000.0,216800.0,333200.0,,,0,,
+PROD-011,Transfer in - NOTURNO - 06am - 09pm (bog pass),Bogotá,VAN 7-10 Pax,770000.0,292000.0,478000.0,,,0,,
+PROD-012,Transfer OUT - DIURNO - 06am -09pm (bog pass),Bogotá,Carro 3 Pessoas,360000.0,80000.0,280000.0,,,0,,
+PROD-013,Transfer OUT - DIURNO - 06am -09pm (bog pass),Bogotá,VAN 4-6 PAX,550000.0,140000.0,410000.0,,,0,,
+PROD-014,Transfer OUT - DIURNO - 06am - 09pm (bog pass),Bogotá,VAN 7-10 Pax,770000.0,212800.0,557200.0,,,0,,
+PROD-015,Transfer OUT - NOTURNO - 06am - 09pm (bog pass),Bogotá,Carro 3 Pessoas,360000.0,91200.0,268800.0,,,0,,
+PROD-016,Transfer OUT - NOTURNIO - 06am - 09pm (bog pass),Bogotá,VAN 4-6 PAX,550000.0,160800.0,389200.0,,,0,,
+PROD-017,Transfer OUT - NOTURNO - 06am - 09pm (bog pass),Bogotá,VAN 7-10 Pax,770000.0,244000.0,526000.0,,,0,,
+PROD-018,Jantar Fenix Beach,Cartagena,,370000.0,225000.0,145000.0,"Apresentar-se  na Porta 02 da Marina La Bodeguita. Dentro da marina, a pessoa responsável de Fenix Beach dará assistência para o embarque.",18:40,14000.0,Pagar as taxas de COP 14.000 por pessoa,
+PROD-019,Jantar Fenix Beach,Cartagena,,300000.0,150000.0,150000.0,"Apresentar-se  na Porta 02 da Marina La Bodeguita. Dentro da marina, a pessoa responsável de Fenix Beach dará assistência para o embarque.",18:40,14000.0,Pagar as taxas de COP 14.000 por pessoa,
+PROD-020,Corona Island,Cartagena,,850000.0,633000.0,217000.0,Apresentar-se na recepção do hotel para esperar a van.,08:15,26500.0,Pagar a taxas portuárias COP 26.500(valor por pessoa– somente em dinheiro) na van para entrar na Marina.,
+PROD-021,Capri Premium,Cartagena,,610000.0,390000.0,220000.0,Apresentar-se na recepção do hotel para esperar a van de Coralina Island. Para hotéis em Bocagrande a partir de 07:45am e hotéis na cidade amuralhada a partir de 08am na recepção.,07:45,34000.0,Pagar a taxas portuárias COP 29.000 + Seguro COP 5.000 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações),
+PROD-022,Capri Classic,Cartagena,,510000.0,330000.0,180000.0,Apresentar-se na recepção do hotel para esperar a van de Coralina Island. Para hotéis em Bocagrande a partir de 07:45am e hotéis na cidade amuralhada a partir de 08am,07:45,34000.0,Pagar a taxas portuárias COP 29.000 + Seguro COP 5.000 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações),
+PROD-023,Isla Bela,Cartagena,,490000.0,300000.0,190000.0,Apresentar-se  na porta 03 da Marina la Bodeguita.,07:30,34000.0,Pagar a taxas portuárias COP 29.000 + Seguro COP 5.000 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações),
+PROD-024,Isla Bela chd - 03 a 10 anos,Cartagena,,390000.0,260000.0,130000.0,Apresentar-se  na porta 03 da Marina la Bodeguita.,07:30,34000.0,Pagar a taxas portuárias COP 29.000 + Seguro COP 5.000 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações),
+PROD-025,Mergulho iniciante,Cartagena,,890000.0,620000.0,270000.0,0,,0.0,,
+PROD-026,Mergulho para certificados,Cartagena,,800000.0,570000.0,230000.0,0,,0.0,,
+PROD-027,Bona Vida Sunset Adulto,Cartagena,,230000.0,134000.0,96000.0,Apresentar-se na Marina La Bodeguita porta 3 onde o catamarã Bona Vida estará ancorado. A tripulação dará toda assistência no embarque. Retorno para a Marina Los Pegasos às 16:00.,08:30,26500.0,Pagar a taxas portuárias COP 26.500 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações),
+PROD-028,Bona Vida Sunset CHD - 7 a 14 anos,Cartagena,,190000.0,67000.0,123000.0,Apresentar-se na Marina La Bodeguita porta 3 onde o catamarã Bona Vida estará ancorado. A tripulação dará toda assistência no embarque. Retorno para a Marina Los Pegasos às 16:00.,08:30,26500.0,Pagar a taxas portuárias COP 26.500 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações),
+PROD-029,Bona Vida Islas Adulto,Cartagena,,510000.0,390000.0,120000.0,Apresentar-se na Marina La Bodeguita porta 3 onde o catamarã Bona Vida estará ancorado. A tripulação dará toda assistência no embarque. Retorno para a Marina Los Pegasos às 16:00.,08:30,26500.0,Pagar a taxas portuárias COP 26.500 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações),
+PROD-030,Bona Vida Islas CHD - 7 a 14 anos,Cartagena,,190000.0,67000.0,123000.0,Apresentar-se na Marina La Bodeguita porta 3 onde o catamarã Bona Vida estará ancorado. A tripulação dará toda assistência no embarque. Retorno para a Marina Los Pegasos às 16:00.,08:30,26500.0,Pagar a taxas portuárias COP 26.500 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações),
+PROD-031,BORA BORA CLUB,Cartagena,,450000.0,290000.0,160000.0,Apresentar-se  na porta 03 da Marina la Bodeguita.,07:20,34000.0,Pagar a taxas portuárias COP 29.000 + Seguro COP 5.000 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações),
+PROD-032,BORA VIP,Cartagena,,540000.0,380000.0,160000.0,Apresentar-se  na porta 03 da Marina la Bodeguita.,07:20,34000.0,Pagar a taxas portuárias COP 29.000 + Seguro COP 5.000 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações),
+PROD-033,TOP 3,Cartagena,,500000.0,360000.0,140000.0,,,0,,
+PROD-034,PAO PAO,Cartagena,,450000.0,280000.0,170000.0,Apresentar-se  na porta 03 da Marina la Bodeguita.,07:20,34000.0,Pagar a taxas portuárias COP 29.000 + Seguro COP 5.000 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações),
+PROD-035,Paue,Cartagena,,520000.0,370000.0,150000.0,Apresentar-se na porta 04 da Marina la Bodeguita.,07:30,34500.0,Pagar a taxas portuárias COP 29.000 + Seguro COP 5.500 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações),
+PROD-036,Paue CHD 04 A 07 ANOS,Cartagena,,370000.0,250000.0,120000.0,,,0,,
+PROD-037,Rosario de Mar plan arrecife,Cartagena,,450000.0,300000.0,150000.0,Apresentar-se na porta 04 da Marina la Bodeguita.,08:15,29000.0,Pagar a taxas portuárias COP29;000(valor por pessoa – somente em dinheiro. Valor sujeito a alterações),
+PROD-038,rosario de mar CHD 04 a 07 anos plan arrecife,Cartagena,,370000.0,220000.0,150000.0,Apresentar-se na porta 04 da Marina la Bodeguita.,08:15,29000.0,Pagar a taxas portuárias COP29;000(valor por pessoa – somente em dinheiro. Valor sujeito a alterações),
+PROD-039,Rosario de Mar plan abanico (open bar),Cartagena,,580000.0,400000.0,180000.0,Apresentar-se na porta 04 da Marina la Bodeguita.,08:15,29000.0,Pagar a taxas portuárias COP29;000(valor por pessoa – somente em dinheiro. Valor sujeito a alterações),
+PROD-040,Sabai,Cartagena,,520000.0,390000.0,130000.0,Apresentar-se na  Marina Todomar Bocagrande,07:45,0.0,,
+PROD-041,sabai chd 5 a 09 anos,Cartagena,,380000.0,130000.0,250000.0,Apresentar-se na  Marina Todomar Bocagrande,07:45,0.0,,
+PROD-042,alondra in,Cartagena,,160000.0,61000.0,99000.0,,,0,,
+PROD-043,alondra out,Cartagena,,140000.0,61000.0,79000.0,,,0,,
+PROD-044,alondra in out,Cartagena,,250000.0,122000.0,128000.0,,,0,,
+PROD-045,alondra in van 8 pax,Cartagena,,300000.0,160000.0,140000.0,,,0,,
+PROD-046,alondra out van 8 pax,Cartagena,,340000.0,160000.0,180000.0,,,0,,
+PROD-047,alondra in e out van 8 pax,Cartagena,,580000.0,320000.0,260000.0,,,0,,
+PROD-048,alondra in van 14pax,Cartagena,,300000.0,160000.0,140000.0,,,0,,
+PROD-049,alondra out van 14 pax,Cartagena,,340000.0,160000.0,180000.0,,,0,,
+PROD-050,alondra in e out van 14 pax,Cartagena,,580000.0,320000.0,260000.0,,,0,,
+PROD-051,alondra aviario ate 3 pax,Cartagena,,580000.0,385000.0,195000.0,,,0,,
+PROD-052,alondra aviario ate 8 pax,Cartagena,,780000.0,555000.0,225000.0,,,0,,
+PROD-053,alondra aviario ate 14 pax,Cartagena,,900000.0,660000.0,240000.0,,,0,,
+PROD-054,Corona Island,Cartagena,,850000.0,633000.0,217000.0,Apresentar-se na recepção do hotel para esperar a van.,08:15,26500.0,Pagar a taxas portuárias COP 26.500(valor por pessoa– somente em dinheiro) na van para entrar na Marina.,
+PROD-055,isla palma,Cartagena,,550000.0,420000.0,130000.0,"Apresentar-se  na porta 02 da Marina la Bodeguita, onde a pessoa responsável pelo embarque e dará o suporte no embarque.",05:45,29000.0,Pagar a taxas portuárias COP 29.000 (valor por pessoa– somente em dinheiro) na van para entrar na Marina.,
+PROD-056,isla palma CHD 04 a 06 anos,Cartagena,,420000.0,350000.0,70000.0,"Apresentar-se  na porta 02 da Marina la Bodeguita, onde a pessoa responsável pelo embarque e dará o suporte no embarque.",05:45,29000.0,Pagar a taxas portuárias COP 29.000 (valor por pessoa– somente em dinheiro) na van para entrar na Marina.,
+PROD-057,Aluguel De Moto Elétrica,Cartagena,,0,0,0,"Apresentar-se na Cidade Amuralhada, Calle 2a de Badillo 36 – 54 - 58 P 1 emabixo do hostal Badillo 
+ Diagonal ao Restaurante La Vitrola",,0.0,,TARIFAS-only (precio pendiente)
+PROD-058,Aluguel De Moto Elétrica 2 Pessoas,Cartagena,,0,0,0,"Apresentar-se na Cidade Amuralhada, Calle 2a de Badillo 36 – 54 - 58 P 1 emabixo do hostal Badillo 
+ Diagonal ao Restaurante La Vitrola",,0.0,,TARIFAS-only (precio pendiente)
+PROD-059,Aula De Salsa,Cartagena,,0,0,0,"Apresentar-se  no Lunático Cooking Studio na Calle del Pedregal n 29, no Bairro de Getsemani.",17:00,0.0,,TARIFAS-only (precio pendiente)
+PROD-060,Aula De Salsa Criança,Cartagena,,0,0,0,"Apresentar-se  no Lunático Cooking Studio na Calle del Pedregal n 29, no Bairro de Getsemani.",17:00,0.0,,TARIFAS-only (precio pendiente)
+PROD-061,Degustação De Cervejas,Cartagena,,0,0,0,0,,0.0,,TARIFAS-only (precio pendiente)
+PROD-062,Degustação De Rum Colombiano,Cartagena,,0,0,0,0,,0.0,,TARIFAS-only (precio pendiente)
+PROD-063,Ensaio Fotográfico,Cartagena,,0,0,0,"Apresentar-se na Iglesia San Pedro Claver.
+  No dia anterior ao passeio, será enviado contato do fotógrafo.",,0.0,,TARIFAS-only (precio pendiente)
+PROD-064,Experiência Culinária,Cartagena,,0,0,0,"Apresentar-se  no Lunático Cooking Studio na Calle del Pedregal n 29, no Bairro de Getsemani.",10:30,0.0,,TARIFAS-only (precio pendiente)
+PROD-065,Experiência Culinária Criança,Cartagena,,0,0,0,"Apresentar-se  no Lunático Cooking Studio na Calle del Pedregal n 29, no Bairro de Getsemani.",10:30,0.0,,TARIFAS-only (precio pendiente)
+PROD-066,Fenix Cena Criança,Cartagena,,0,0,0,"Apresentar-se  na Porta 02 da Marina La Bodeguita. Dentro da marina, a pessoa responsável de Fenix Beach dará assistência para o embarque.",18:40,14000.0,Pagar as taxas de COP 14.000 por pessoa,TARIFAS-only (precio pendiente)
+PROD-067,Fenix Decoração Na Praia,Cartagena,,0,0,0,0,,0.0,,TARIFAS-only (precio pendiente)
+PROD-068,Fenix Decoração Ninho,Cartagena,,0,0,0,0,,0.0,,TARIFAS-only (precio pendiente)
+PROD-069,Fenix Decoração Ninho 5/10 Pax,Cartagena,,0,0,0,0,,0.0,,TARIFAS-only (precio pendiente)
+PROD-070,Fenix Pasadia,Cartagena,,0,0,0,Apresentar-se na porta 01 da Marina la Bodeguita.,,14000.0,Pagar a taxas portuárias COP 14.000 (valor por pessoa– somente em dinheiro. Sujeito a alteração) na porta 01 para entrar na Marina.,TARIFAS-only (precio pendiente)
+PROD-071,Fenix Pasadia Criança,Cartagena,,0,0,0,Apresentar-se na porta 01 da Marina la Bodeguita.,,14000.0,Pagar a taxas portuárias COP 14.000 (valor por pessoa– somente em dinheiro. Sujeito a alteração) na porta 01 para entrar na Marina.,TARIFAS-only (precio pendiente)
+PROD-072,Fenix Pasadia+Cena,Cartagena,,0,0,0,0,,14000.0,,TARIFAS-only (precio pendiente)
+PROD-073,Insta Tour Ciudad Amurallada,Cartagena,,0,0,0,Apresentar-se  na Iglesia San Pedro Claver para encontrar com o guia.,16:30,0.0,,TARIFAS-only (precio pendiente)
+PROD-074,Insta Tour Ciudad Amurallada Hotel,Cartagena,,0,0,0,Apresentar-sena recepçâo do hotel para encontrar com o guia.,16:30,0.0,,TARIFAS-only (precio pendiente)
+PROD-075,Isla Del Encanto Criança Até 10 Anos,Cartagena,,0,0,0,Apresentar-se na recepção do hotel para esperar a van.,08:15,26500.0,Pagar a taxas portuárias COP 26.500(valor por pessoa– somente em dinheiro) na van para entrar na Marina.,TARIFAS-only (precio pendiente)
+PROD-076,Isla Del Encanto Criança Até 4 Anos,Cartagena,,0,0,0,Apresentar-se na recepção do hotel para esperar a van.,08:15,26500.0,Pagar a taxas portuárias COP 26.500(valor por pessoa– somente em dinheiro) na van para entrar na Marina.,TARIFAS-only (precio pendiente)
+PROD-077,Isla Del Encanto Ta,Cartagena,,0,0,0,Apresentar-se na recepção do hotel para esperar a van.,08:15,26500.0,Pagar a taxas portuárias COP 26.500(valor por pessoa– somente em dinheiro) na van para entrar na Marina.,TARIFAS-only (precio pendiente)
+PROD-078,Isla Del Pirata Criança,Cartagena,,0,0,0,0,,26500.0,,TARIFAS-only (precio pendiente)
+PROD-079,Isla Del Sol Criança De 2 Até 3 Anos,Cartagena,,0,0,0,Apresentar-sena porta 04 da Marina la Bodeguita onde a pessoa responsável pelo embarque de Isla del Sol dará o suporte no embarque.,07:50,26500.0,Pagar a taxas portuárias COP 26.500(valor por pessoa– somente em dinheiro) na van para entrar na Marina.,TARIFAS-only (precio pendiente)
+PROD-080,Isla Del Sol Parada,Cartagena,,0,0,0,Apresentar-sena porta 04 da Marina la Bodeguita onde a pessoa responsável pelo embarque de Isla del Sol dará o suporte no embarque.,07:50,26500.0,Pagar a taxas portuárias COP 26.500(valor por pessoa– somente em dinheiro) na van para entrar na Marina.,TARIFAS-only (precio pendiente)
+PROD-081,Luxury Criança,Cartagena,,0,0,0,Apresentar-se as 07:15 na porta 04 da Marina la Bodeguita. Pagar as taxas portuárias COP 23.000 (valor por pessoa – somente em dinheiro) na porta 04 para entrar na Marina,,26500.0,,TARIFAS-only (precio pendiente)
+PROD-082,Luxury Open Bar,Cartagena,,0,0,0,Apresentar-se as 07:15 na porta 04 da Marina la Bodeguita. Pagar as taxas portuárias COP 23.000 (valor por pessoa – somente em dinheiro) na porta 04 para entrar na Marina,,26500.0,,TARIFAS-only (precio pendiente)
+PROD-083,Mangata Beach Club,Cartagena,,0,0,0,Apresentar-se  na porta 04 da Marina la Bodeguita.,07:20,26500.0,Pagar a taxas portuárias COP 26.500(valor por pessoa– somente em dinheiro) na van para entrar na Marina.,TARIFAS-only (precio pendiente)
+PROD-084,Mangata Beach Club Criança,Cartagena,,0,0,0,Apresentar-se  na porta 04 da Marina la Bodeguita.,07:20,26500.0,Pagar a taxas portuárias COP 26.500(valor por pessoa– somente em dinheiro) na van para entrar na Marina.,TARIFAS-only (precio pendiente)
+PROD-085,Namaste,Cartagena,,0,0,0,0,,0.0,,TARIFAS-only (precio pendiente)
+PROD-086,Namaste Entardecer,Cartagena,,0,0,0,"Apresentar-seam na Praia de Castillo Grande, atrás do Hospital de Bocagrande onde a pessoa responsável pelo embarque estará esperando no banner de Namastê e dará assistência. O embarque é feito na praia direto na agua, recomendamos ir de shorts e chinelos.",08:45,0.0,,TARIFAS-only (precio pendiente)
+PROD-087,Namaste Holistico,Cartagena,,0,0,0,"Apresentar-seam na Praia de Castillo Grande, atrás do Hospital de Bocagrande onde a pessoa responsável pelo embarque estará esperando no banner de Namastê e dará assistência. O embarque é feito na praia direto na agua, recomendamos ir de shorts e chinelos.",08:45,0.0,,TARIFAS-only (precio pendiente)
+PROD-088,Namaste Romantico,Cartagena,,0,0,0,"Apresentar-seam na Praia de Castillo Grande, atrás do Hospital de Bocagrande onde a pessoa responsável pelo embarque estará esperando no banner de Namastê e dará assistência. O embarque é feito na praia direto na agua, recomendamos ir de shorts e chinelos.",08:45,0.0,,TARIFAS-only (precio pendiente)
+PROD-089,Palmarito,Cartagena,,0,0,0,"Apresentar-se  am na Praia de Castillo Grande, atrás do Hospital de Bocagrande onde a pessoa responsável pelo embarque estará esperando. O embarque é feito na praia direto na agua, recomendamos ir de shorts e chinelos.",09:00,0.0,,TARIFAS-only (precio pendiente)
+PROD-090,Palmarito Criança,Cartagena,,0,0,0,"Apresentar-se  am na Praia de Castillo Grande, atrás do Hospital de Bocagrande onde a pessoa responsável pelo embarque estará esperando. O embarque é feito na praia direto na agua, recomendamos ir de shorts e chinelos.",09:00,0.0,,TARIFAS-only (precio pendiente)
+PROD-091,Parada Em Paue,Cartagena,,0,0,0,0,0,0.0,,TARIFAS-only (precio pendiente)
+PROD-092,Parada Em Paue Crianças,Cartagena,,0,0,0,0,0,0.0,,TARIFAS-only (precio pendiente)
+PROD-093,Parada Pao Pao 1,Cartagena,,0,0,0,0,0,0.0,,TARIFAS-only (precio pendiente)
+PROD-094,Parada Pao Pao 2,Cartagena,,0,0,0,0,0,0.0,,TARIFAS-only (precio pendiente)
+PROD-095,Pau´E Criança,Cartagena,,0,0,0,Apresentar-se na porta 04 da Marina la Bodeguita.,07:30,34500.0,Pagar a taxas portuárias COP 29.000 + Seguro COP 5.500 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações),TARIFAS-only (precio pendiente)
+PROD-096,Sabai Criança Terrestre,Cartagena,,0,0,0,Apresentarse na recepção do hotel,07:30,0.0,,TARIFAS-only (precio pendiente)
+PROD-097,Parada En Sabai,Cartagena,,0,0,0,Apresentar-se na  Marina Todomar Bocagrande,07:45,0.0,,TARIFAS-only (precio pendiente)
+PROD-098,Sofitel Baru Playa Blanca,Cartagena,,0,0,0,Apresentarse na recepção do hotel,08:00,0.0,,TARIFAS-only (precio pendiente)
+PROD-099,Sofitel Baru Playa Blanca Criança,Cartagena,,0,0,0,0,,0.0,,TARIFAS-only (precio pendiente)
+PROD-100,Sofitel Casablanca,Cartagena,,0,0,0,Apresentar-se na recepção do hotel as 09:00 Hrs. Retorno as 17:00 Hrs.,,0.0,,TARIFAS-only (precio pendiente)
+PROD-101,Sofitel Casablanca Criança,Cartagena,,0,0,0,Apresentar-se na recepção do hotel as 07:30 Hrs. Retorno as 17:30 Hrs.,,0.0,,TARIFAS-only (precio pendiente)
+PROD-102,Sofitel Casablanca Familiar,Cartagena,,0,0,0,0,,0.0,,TARIFAS-only (precio pendiente)
+PROD-103,Sofitel Santa Clara Aula De Culinária,Cartagena,,0,0,0,Apresentar-se na recepção do hotel as 07:30 Hrs. Retorno as 17:30 Hrs.,,0.0,,TARIFAS-only (precio pendiente)
+PROD-104,Sofitel Santa Clara Cata De Ron Y Chocolate,Cartagena,,0,0,0,Apresentar-se na recepção do hotel as 07:30 Hrs. Retorno as 17:30 Hrs.,,0.0,,TARIFAS-only (precio pendiente)

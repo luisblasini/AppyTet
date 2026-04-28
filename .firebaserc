@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "appytet-v5-dev-9182",
+    "production": "appytet-34f3f"
+  },
+  "targets": {},
+  "etags": {}
+}

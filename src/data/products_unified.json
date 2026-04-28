@@ -1,0 +1,262 @@
+[
+  {
+    "ID": "PROD-001",
+    "Passeio": "City Tour Imperdíveis - Manhã",
+    "Ciudad": "Cartagena",
+    "Descricao": "Regular",
+    "Valor_venda_COP": 300000,
+    "Preco_custo_COP": 119200,
+    "ENTRADA": 180800,
+    "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": ""
+  },
+  {
+    "ID": "PROD-002",
+    "Passeio": "City Tour Bairros Inconicos - Tarde",
+    "Ciudad": "Cartagena",
+    "Descricao": "Regular",
+    "Valor_venda_COP": 300000,
+    "Preco_custo_COP": 119200,
+    "ENTRADA": 180800,
+    "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": ""
+  },
+  {
+    "ID": "PROD-003",
+    "Passeio": "Catedral De Sal (Bog Pass)",
+    "Ciudad": "Bogotá",
+    "Descricao": "Regular",
+    "Valor_venda_COP": 480000,
+    "Preco_custo_COP": 263200,
+    "ENTRADA": 116800,
+    "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": ""
+  },
+  {
+    "ID": "PROD-004",
+    "Passeio": "Catedral De Sal + Guatavita (Bog Pass)",
+    "Ciudad": "Bogotá",
+    "Descricao": "Regular",
+    "Valor_venda_COP": 600000,
+    "Preco_custo_COP": 343200,
+    "ENTRADA": 256800,
+    "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": ""
+  },
+  {
+    "ID": "PROD-018",
+    "Passeio": "Jantar Fenix Beach",
+    "Ciudad": "Cartagena",
+    "Descricao": "",
+    "Valor_venda_COP": 370000,
+    "Preco_custo_COP": 225000,
+    "ENTRADA": 145000,
+    "Local": "Apresentar-se na Porta 02 da Marina La Bodeguita. Dentro da marina, a pessoa responsável de Fenix Beach dará assistência para o embarque.",
+    "Hora": "18:40",
+    "Taxas_valor": 14000,
+    "Taxas_info": "Pagar as taxas de COP 14.000 por pessoa",
+    "Comentarios": ""
+  },
+  {
+    "ID": "PROD-021",
+    "Passeio": "Capri Premium",
+    "Ciudad": "Cartagena",
+    "Descricao": "",
+    "Valor_venda_COP": 610000,
+    "Preco_custo_COP": 390000,
+    "ENTRADA": 220000,
+    "Local": "Apresentar-se na recepção do hotel para esperar a van de Coralina Island. Para hotéis em Bocagrande a partir de 07:45am e hotéis na cidade amuralhada a partir de 08am na recepção.",
+    "Hora": "07:45",
+    "Taxas_valor": 34000,
+    "Taxas_info": "Pagar a taxas portuárias COP 29.000 + Seguro COP 5.000 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações)",
+    "Comentarios": ""
+  },
+  {
+    "ID": "PROD-022",
+    "Passeio": "Capri Classic",
+    "Ciudad": "Cartagena",
+    "Descricao": "",
+    "Valor_venda_COP": 510000,
+    "Preco_custo_COP": 330000,
+    "ENTRADA": 180000,
+    "Local": "Apresentar-se na recepção do hotel para esperar a van de Coralina Island. Para hotéis em Bocagrande a partir de 07:45am e hotéis na cidade amuralhada a partir de 08am na recepção.",
+    "Hora": "07:45",
+    "Taxas_valor": 34000,
+    "Taxas_info": "Pagar a taxas portuárias COP 29.000 + Seguro COP 5.000 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações)",
+    "Comentarios": ""
+  },
+  {
+    "ID": "PROD-023",
+    "Passeio": "Isla Bela",
+    "Ciudad": "Cartagena",
+    "Descricao": "",
+    "Valor_venda_COP": 490000,
+    "Preco_custo_COP": 320000,
+    "ENTRADA": 170000,
+    "Local": "Apresentar-se na porta 03 da Marina la Bodeguita.",
+    "Hora": "07:30",
+    "Taxas_valor": 34000,
+    "Taxas_info": "Pagar a taxas portuárias COP 29.000 + Seguro COP 5.000 (valor por pessoa – somente em dinheiro. Valor sujeito a alterações)",
+    "Comentarios": ""
+  },
+  {
+    "ID": "PROD-105",
+    "Passeio": "Sunset Sibarita (Cena/Bebidas)",
+    "Ciudad": "Cartagena",
+    "Descricao": "",
+    "Valor_venda_COP": 250000,
+    "Preco_custo_COP": 130000,
+    "ENTRADA": 120000,
+    "Local": "Marina Los Pegasos",
+    "Hora": "16:30",
+    "Taxas_valor": 18000,
+    "Taxas_info": "Tasas portuárias não inclusas",
+    "Comentarios": ""
+  },
+  {
+    "ID": "PROD-064",
+    "Passeio": "Experiência Culinária",
+    "Ciudad": "Cartagena",
+    "Descricao": "Aula de cocina en Getsemaní",
+    "Valor_venda_COP": 420000,
+    "Preco_custo_COP": 280000,
+    "ENTRADA": 140000,
+    "Local": "Apresentar-se no Lunático Cooking Studio na Calle del Pedregal n 29, no Bairro de Getsemani.",
+    "Hora": "10:30",
+    "Taxas_valor": 0,
+    "Taxas_info": "",
+    "Comentarios": ""
+  },
+  {
+    "ID": "PROD-121",
+    "Passeio": "City Tour Panorâmico",
+    "Ciudad": "Medellín",
+    "Descricao": "Em Chiva tradicional",
+    "Valor_venda_COP": 250000,
+    "Preco_custo_COP": 150000,
+    "ENTRADA": 100000,
+    "Local": "Parque del Poblado",
+    "Hora": "14:15",
+    "Taxas_valor": 0,
+    "Taxas_info": "",
+    "Comentarios": ""
+  },
+  {
+    "ID": "PROD-122",
+    "Passeio": "Comuna 13 - Grafiti Tour",
+    "Ciudad": "Medellín",
+    "Descricao": "Guia bilingue e show de baile",
+    "Valor_venda_COP": 350000,
+    "Preco_custo_COP": 210000,
+    "ENTRADA": 140000,
+    "Local": "Parque del Poblado",
+    "Hora": "09:35",
+    "Taxas_valor": 0,
+    "Taxas_info": "",
+    "Comentarios": ""
+  },
+  {
+    "ID": "PROD-123",
+    "Passeio": "Tour Não Dizemos seu Nome",
+    "Ciudad": "Medellín",
+    "Descricao": "Historia de Pablo Escobar",
+    "Valor_venda_COP": 300000,
+    "Preco_custo_COP": 180000,
+    "ENTRADA": 120000,
+    "Local": "A combinar",
+    "Hora": "09:30",
+    "Taxas_valor": 0,
+    "Taxas_info": "",
+    "Comentarios": ""
+  },
+  {
+    "ID": "PROD-124",
+    "Passeio": "Guatapé - Dia Inteiro",
+    "Ciudad": "Medellín",
+    "Descricao": "Inclui barco na Laguna",
+    "Valor_venda_COP": 400000,
+    "Preco_custo_COP": 240000,
+    "ENTRADA": 160000,
+    "Local": "Parque del Poblado",
+    "Hora": "08:25",
+    "Taxas_valor": 0,
+    "Taxas_info": "Não incluye entrada Pedra do Peñol",
+    "Comentarios": ""
+  },
+  {
+    "ID": "PROD-125",
+    "Passeio": "Tour de Café",
+    "Ciudad": "Medellín",
+    "Descricao": "Degustação e souvenir",
+    "Valor_venda_COP": 340000,
+    "Preco_custo_COP": 204000,
+    "ENTRADA": 136000,
+    "Local": "A combinar",
+    "Hora": "09:00",
+    "Taxas_valor": 0,
+    "Taxas_info": "",
+    "Comentarios": ""
+  },
+  {
+    "ID": "PROD-126", "Passeio": "Transfer IN 3 pax", "Ciudad": "Cartagena", "Valor_venda_COP": 160000, "ENTRADA": 160000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Transfer Aeroporto-Hotel"
+  },
+  {
+    "ID": "PROD-127", "Passeio": "Transfer OUT 3 pax", "Ciudad": "Cartagena", "Valor_venda_COP": 160000, "ENTRADA": 160000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Transfer Hotel-Aeroporto"
+  },
+  {
+    "ID": "PROD-128", "Passeio": "Transfer IN 8 pax", "Ciudad": "Cartagena", "Valor_venda_COP": 300000, "ENTRADA": 300000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Transfer Aeroporto-Hotel"
+  },
+  {
+    "ID": "PROD-129", "Passeio": "Transfer OUT 8 pax", "Ciudad": "Cartagena", "Valor_venda_COP": 300000, "ENTRADA": 300000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Transfer Hotel-Aeroporto"
+  },
+  {
+    "ID": "PROD-130", "Passeio": "Transfer IN 14 pax", "Ciudad": "Cartagena", "Valor_venda_COP": 350000, "ENTRADA": 350000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Transfer Aeroporto-Hotel"
+  },
+  {
+    "ID": "PROD-131", "Passeio": "Transfer OUT 14 pax", "Ciudad": "Cartagena", "Valor_venda_COP": 350000, "ENTRADA": 350000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Transfer Hotel-Aeroporto"
+  },
+  {
+    "ID": "PROD-132", "Passeio": "Transfer IN 18 pax", "Ciudad": "Cartagena", "Valor_venda_COP": 600000, "ENTRADA": 600000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Transfer Aeroporto-Hotel"
+  },
+  {
+    "ID": "PROD-133", "Passeio": "Transfer OUT 18 pax", "Ciudad": "Cartagena", "Valor_venda_COP": 600000, "ENTRADA": 600000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Transfer Hotel-Aeroporto"
+  },
+  {
+    "ID": "PROD-134", "Passeio": "Transfer Privado Bogotá (Carro até 3 pax)", "Ciudad": "Bogotá", "Valor_venda_COP": 360000, "ENTRADA": 360000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": ""
+  },
+  {
+    "ID": "PROD-135", "Passeio": "Transfer Privado Bogotá (Van 4-6 pax)", "Ciudad": "Bogotá", "Valor_venda_COP": 550000, "ENTRADA": 550000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": ""
+  },
+  {
+    "ID": "PROD-136", "Passeio": "Transfer Privado Bogotá (Van 7-10 pax)", "Ciudad": "Bogotá", "Valor_venda_COP": 770000, "ENTRADA": 770000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": ""
+  },
+  {
+    "ID": "PROD-137", "Passeio": "Fazenda de Café Colombiano (Regular)", "Ciudad": "Bogotá", "Valor_venda_COP": 650000, "ENTRADA": 300000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": ""
+  },
+  {
+    "ID": "PROD-138", "Passeio": "Tour de Escala em Bogotá (Privado)", "Ciudad": "Bogotá", "Valor_venda_COP": 570000, "ENTRADA": 250000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Valor ref 2 pax. 1pax: 940k, 3pax: 480k pp, 4pax: 380k pp"
+  },
+  {
+    "ID": "PROD-139", "Passeio": "La Candelaria + Museu (Privado)", "Ciudad": "Bogotá", "Valor_venda_COP": 675000, "ENTRADA": 300000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Valor ref 2 pax. 1pax: 1.12M, 3pax: 575k, 4pax: 480k"
+  },
+  {
+    "ID": "PROD-140", "Passeio": "La Candelaria + Museu + Monserrate (Privado)", "Ciudad": "Bogotá", "Valor_venda_COP": 980000, "ENTRADA": 400000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Valor ref 2 pax. 1pax: 1.5M, 3pax: 855k, 4pax: 680k"
+  },
+  {
+    "ID": "PROD-141", "Passeio": "City Tour Panorâmico Basic (Privado)", "Ciudad": "Bogotá", "Valor_venda_COP": 640000, "ENTRADA": 300000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Valor ref 2 pax. 1pax: 1.075M, 3pax: 545k, 4pax: 480k"
+  },
+  {
+    "ID": "PROD-142", "Passeio": "City Tour Panorâmico Usaquén + Candelaria + Juegos (Privado)", "Ciudad": "Bogotá", "Valor_venda_COP": 1000000, "ENTRADA": 450000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Valor ref 2 pax. 1pax: 1.55M, 3pax: 910k, 4pax: 750k"
+  },
+  {
+    "ID": "PROD-143", "Passeio": "Catedral de Sal Zipaquirá (Privado)", "Ciudad": "Bogotá", "Valor_venda_COP": 850000, "ENTRADA": 350000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Valor ref 2 pax. 1pax: 1.22M, 3pax: 800k, 4pax: 675k"
+  },
+  {
+    "ID": "PROD-144", "Passeio": "Catedral de Sal Zipaquirá + Guia (Privado)", "Ciudad": "Bogotá", "Valor_venda_COP": 1200000, "ENTRADA": 500000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Valor ref 2 pax. 1pax: 1.845M, 3pax: 1.04M, 4pax: 860k"
+  },
+  {
+    "ID": "PROD-145", "Passeio": "Walking Tour Gastronômico de Comida de Rua", "Ciudad": "Bogotá", "Valor_venda_COP": 385000, "ENTRADA": 150000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Valor ref 2 pax. 1pax: 580k, 3pax: 325k, 4pax: 275k"
+  },
+  {
+    "ID": "PROD-146", "Passeio": "Tour Gastronômico com Transporte", "Ciudad": "Bogotá", "Valor_venda_COP": 955000, "ENTRADA": 400000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Valor ref 2 pax. 1pax: 1.455M, 3pax: 850k, 4pax: 700k"
+  },
+  {
+    "ID": "PROD-147", "Passeio": "Fazenda de Café Colombiano (Privado)", "Ciudad": "Bogotá", "Valor_venda_COP": 1170000, "ENTRADA": 500000, "Preco_custo_COP": 0, "Local": "", "Hora": "", "Taxas_valor": 0, "Taxas_info": "", "Comentarios": "Valor ref 2 pax. 1pax: 1.895M, 3pax: 1.05M, 4pax: 845k"
+  }
+]

@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ─────────────────────────────────────────────────────────────────
+    // SECURITY LEVEL: RESTRICTED INTERNAL USE
+    // Op. Date: 2026-04-09 | Owner: TET Appy System
+    //
+    // TODO (PRIORITY 1): Enable Firebase Authentication and replace
+    // the rule below with:
+    //   allow read, write: if request.auth != null;
+    //
+    // CURRENT RULE: Time-locked. Rejects ALL requests after 2027-01-01.
+    // This closes the public "if true" vulnerability without breaking
+    // the current single-user workflow. Rotate before expiry.
+    // ─────────────────────────────────────────────────────────────────
+
+    match /{document=**} {
+      allow read, write: if request.time < timestamp.date(2027, 1, 1);
+    }
+  }
+}
