@@ -22,12 +22,16 @@ const MONTH_MAP = {
 
 /**
  * Converts a date string in any common format to ISO 8601 (YYYY-MM-DD).
+ * Supports: YYYY-MM-DD, DD/MM/YYYY, DD-MM-YYYY, DD.MM.YYYY, "9 de agosto", etc.
  */
 export const formatDateToISO = (dateStr) => {
   if (!dateStr || typeof dateStr !== 'string') return '';
   let clean = dateStr.replace(/[\u200B-\u200D\uFEFF]/g, '').trim();
+
+  // Already ISO
   if (/^\d{4}-\d{2}-\d{2}$/.test(clean)) return clean;
 
+  // Text month: "9 de agosto", "12 março"
   const textMatch = clean.toLowerCase().match(/(\d{1,2})\s*(?:de\s*)?([a-zçñ]+)/);
   if (textMatch) {
     const day = textMatch[1].padStart(2, '0');
@@ -36,8 +40,17 @@ export const formatDateToISO = (dateStr) => {
     return `${year}-${month}-${day}`;
   }
 
-  const parts = clean.split(/[\/\-]/);
+  // Numeric with any delimiter: / - or .
+  const parts = clean.split(/[\/\-.]/);
   if (parts.length >= 2) {
+    // Detect if first part is a 4-digit year (YYYY-MM-DD already handled, but YYYY/MM/DD)
+    if (parts[0].length === 4) {
+      const y = parts[0];
+      const m = parts[1].padStart(2, '0');
+      const d = (parts[2] || '01').padStart(2, '0');
+      return `${y}-${m}-${d}`;
+    }
+    // DD/MM/YYYY or DD.MM.YYYY
     const d = parts[0].padStart(2, '0');
     const m = parts[1].padStart(2, '0');
     let y = parts[2];
@@ -57,6 +70,62 @@ const ALLOWED_FIELDS = [
 ];
 
 const DATE_FIELDS = ['arrival', 'departure', 'dob'];
+
+// ─── Schema Validation Layer ──────────────────────────────────────────────────
+// Ensures AI response fields meet expected types before touching React state.
+// This prevents dirty data (wrong types, labels embedded in values) from
+// corrupting the bookingData object.
+const sanitizeAIResponse = (aiResponse) => {
+  const sanitized = {};
+
+  ALLOWED_FIELDS.forEach(field => {
+    let val = aiResponse[field];
+    if (val === undefined || val === null) return;
+
+    // Reject values that are just the field label echoed back
+    if (typeof val === 'string') {
+      const labelPatterns = [
+        /^nome\s*completo/i, /^passaporte/i, /^cpf/i, /^endere[çc]o/i,
+        /^cep/i, /^data\s*de/i, /^email/i, /^celular/i, /^instagram/i,
+        /^cidade/i, /^hotel/i, /^motivo/i, /^como\s*conheceu/i,
+        /^contato\s*de\s*emerg/i, /^pr[oó]ximo\s*destino/i,
+        /^YYYY-MM-DD$/i
+      ];
+      if (labelPatterns.some(p => p.test(val.trim()))) return;
+    }
+
+    // Type coercion and cleanup per field
+    if (DATE_FIELDS.includes(field)) {
+      val = formatDateToISO(String(val));
+      // Final guard: if still not ISO, discard
+      if (val && !/^\d{4}-\d{2}-\d{2}$/.test(val)) val = '';
+    } else if (field === 'name') {
+      val = toTitleCase(String(val));
+    } else if (field === 'pax' || field === 'paxChildren') {
+      // Extract digits only
+      const digits = String(val).replace(/\D/g, '');
+      val = digits || (field === 'paxChildren' ? '0' : '');
+    } else if (field === 'companionList') {
+      if (!Array.isArray(val)) return;
+      val = val.map(c => ({
+        name: toTitleCase(String(c?.name || '')),
+        doc: String(c?.doc || ''),
+        dob: formatDateToISO(String(c?.dob || ''))
+      }));
+    } else if (field === 'phone') {
+      // Keep only digits and leading +
+      val = String(val).replace(/[^\d+]/g, '');
+    } else {
+      val = String(val).trim();
+    }
+
+    if (val !== '' && val !== undefined) {
+      sanitized[field] = val;
+    }
+  });
+
+  return sanitized;
+};
 
 // ─── Main Hook ────────────────────────────────────────────────────────────────
 
@@ -129,36 +198,29 @@ export const useAIProcessor = ({
     setIsProcessingAI(true);
     try {
       const aiResponse = await parseWhatsAppMessageAI(rawMessage, pricesDb);
+      console.log('[AI Parser] Raw AI response:', JSON.stringify(aiResponse, null, 2));
       const mappedTours = (aiResponse.tours || []).map(hydrateTour);
-      const safeFields = {};
-      ALLOWED_FIELDS.forEach(f => {
-        if (aiResponse[f]) {
-          let val = aiResponse[f];
-          if (DATE_FIELDS.includes(f)) val = formatDateToISO(val);
-          if (f === 'name') val = toTitleCase(val);
-          if (f === 'companionList' && Array.isArray(val)) {
-            val = val.map(c => ({ ...c, name: toTitleCase(c.name) }));
-          }
-          safeFields[f] = val;
-        }
-      });
+      // [BLOQUE 2] Schema validation layer replaces ad-hoc field-by-field cleanup
+      const safeFields = sanitizeAIResponse(aiResponse);
+      console.log('[AI Parser] Sanitized fields:', JSON.stringify(safeFields, null, 2));
       const newData = { ...bookingData, ...safeFields, tours: mappedTours };
       setBookingData(newData);
       if (newData.name) {
-        try {
-          await upsertContactSupabase({
-            name: newData.name,
-            phone: newData.phone,
-            cpf: newData.cpf,
-            passport: newData.passport,
-            email: newData.email,
-            hotel: newData.hotel,
-            arrival: newData.arrival,
-            departure: newData.departure
-          });
-        } catch (e) {
-          console.warn('Supabase Contact save failed:', e);
-        }
+        // [REMEDIACIÓN 1.2] Silent Failure eliminado.
+        // Si el guardado del contacto falla, el error se propaga hacia el catch externo
+        // para alertar al usuario en lugar de ocultar la falla de red.
+        await upsertContactSupabase({
+          name:      newData.name,
+          phone:     newData.phone,
+          cpf:       newData.cpf,
+          passport:  newData.passport,
+          email:     newData.email,
+          address:   newData.address,   // [NUEVO]
+          cep:       newData.cep,        // [NUEVO]
+          dob:       newData.dob,        // [NUEVO]
+          city:      newData.city,       // [NUEVO]
+          instagram: newData.instagram,  // [NUEVO]
+        });
       }
       setStep(2);
     } catch (err) {

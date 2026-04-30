@@ -1,10 +1,9 @@
 import { useState, useMemo } from 'react';
 import { formatCurrency, formatDateDisplay } from '../utils/formatters';
 
-export const useBookingTotals = (bookingData, pricesDb, exchangeRate) => {
+export const useBookingTotals = (bookingData, pricesDb, exchangeRate, manualRate) => {
   const [paymentMethod, setPaymentMethod] = useState('entrada_saldo');
   const [wiseMarkup, setWiseMarkup] = useState(6);       // % markup, updated tracking as per standard
-  const [manualRate, setManualRate] = useState(0);
   const [financialOverrides, setFinancialOverrides] = useState({});  // direct overrides: {totalCOP, entradaBRL, saldoCOP, totalBRL}
 
   const totals = useMemo(() => {
@@ -250,8 +249,6 @@ export const useBookingTotals = (bookingData, pricesDb, exchangeRate) => {
     setPaymentMethod,
     wiseMarkup,
     setWiseMarkup,
-    manualRate,
-    setManualRate,
     financialOverrides,
     setFinancialOverrides,
     totals,

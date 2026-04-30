@@ -55,6 +55,9 @@ export const getProductsFromSupabase = async () => {
 };
 
 // Helper: map app format → Supabase columns
+// [REMEDIACIÓN 1.3] — Campos status y voucher_obs añadidos.
+// Antes se leían desde Supabase (GET) pero se ignoraban al escribir (INSERT/UPDATE),
+// sobreescribiendo o perdiendo instrucciones críticas del voucher y estado del producto.
 const toSupabaseProduct = (p) => ({
   name: p.Passeio || '',
   city: p.Ciudad || 'Cartagena',
@@ -68,6 +71,8 @@ const toSupabaseProduct = (p) => ({
   fees_info: p.Taxas_info || '',
   comments: p.Comentarios || '',
   has_variable_time: Boolean(p.hasVariableTime),
+  status: p.status || 'active',        // [NUEVO] Preserva estado del producto
+  voucher_obs: p.voucher_obs || '',     // [NUEVO] Preserva instrucciones del voucher
 });
 
 /**
@@ -130,31 +135,85 @@ export const deleteProductSupabase = async (id) => {
 
 /**
  * Save or Update a Contact in Supabase.
+ * [REMEDIACIÓN 1.2] — Cambios aplicados:
+ *   1. Se añaden todos los campos faltantes: address, cep, dob, city, instagram.
+ *   2. Resolución de identidad robusta: Si no hay CPF (pasajero extranjero),
+ *      se usa 'phone' como columna de conflicto para evitar fusión errónea de contactos.
+ *      ⚠️ REQUISITO DE BD: La tabla 'contacts' debe tener estos índices únicos:
+ *         - UNIQUE INDEX en 'cpf' WHERE cpf IS NOT NULL
+ *         - UNIQUE INDEX en 'phone' (o UNIQUE en columna 'phone')
  * Returns the numeric ID of the contact.
  */
 export const upsertContactSupabase = async (contact) => {
   if (IS_STAGING) {
     console.warn('🚀 [Staging Mode] Mock Upsert Contact:', contact.name);
-    return Date.now(); // Mock ID
+    return Date.now();
   }
 
-  const { data, error } = await supabase
-    .from('contacts')
-    .upsert({
-      name: contact.name,
-      phone: contact.phone,
-      cpf: contact.cpf,
-      email: contact.email,
-      passport: contact.passport
-    }, { onConflict: 'cpf' }) // Evita duplicados por CPF
-    .select('id')
-    .single();
+  const payload = {
+    name:      contact.name      || null,
+    phone:     contact.phone     || null,
+    cpf:       contact.cpf       || null,
+    email:     contact.email     || null,
+    passport:  contact.passport  || null,
+    address:   contact.address   || null,
+    cep:       contact.cep       || null,
+    dob:       contact.dob       || null,
+    city:      contact.city      || null,
+    instagram: contact.instagram || null,
+  };
 
-  if (error) {
-    console.error('[Supabase] Error upserting contact:', error.message);
-    throw new Error(error.message);
+  let existingContactId = null;
+
+  try {
+    // 1. Search by CPF if provided
+    if (contact.cpf) {
+      const { data: byCpf } = await supabase
+        .from('contacts')
+        .select('id')
+        .eq('cpf', contact.cpf)
+        .maybeSingle();
+      
+      if (byCpf) existingContactId = byCpf.id;
+    }
+
+    // 2. If not found by CPF, search by phone
+    if (!existingContactId && contact.phone) {
+      const { data: byPhone } = await supabase
+        .from('contacts')
+        .select('id')
+        .eq('phone', contact.phone)
+        .maybeSingle();
+      
+      if (byPhone) existingContactId = byPhone.id;
+    }
+
+    if (existingContactId) {
+      // 3. Update existing contact
+      const { data: updated, error: updateError } = await supabase
+        .from('contacts')
+        .update(payload)
+        .eq('id', existingContactId)
+        .select('id')
+        .single();
+
+      if (updateError) throw updateError;
+      return updated.id;
+    } else {
+      // 4. Insert new contact
+      const { data: inserted, error: insertError } = await supabase
+        .from('contacts')
+        .insert(payload)
+        .select('id')
+        .single();
+
+      if (insertError) throw insertError;
+      return inserted.id;
+    }
+  } catch (error) {
+    console.error('[Supabase] Error resolution identity/upserting contact:', error.message);
+    throw new Error(`Error en persistencia de contacto: ${error.message}`);
   }
-  return data.id;
 };
 
 /**
@@ -370,6 +429,25 @@ export const deleteConfirmationSupabase = async (id) => {
     .eq('id', id);
   if (error) {
     console.error('[Supabase] Error deleting confirmation:', error.message);
+    throw new Error(error.message);
+  }
+};
+
+/**
+ * Delete a contact from Supabase.
+ * [REMEDIACIÓN 1.2] — Reemplaza la función deleteContact depreciada de db.js.
+ */
+export const deleteContactSupabase = async (id) => {
+  if (IS_STAGING) {
+    console.warn(`🚀 [Staging Mode] Mock Delete Contact ID: ${id}`);
+    return;
+  }
+  const { error } = await supabase
+    .from('contacts')
+    .delete()
+    .eq('id', id);
+  if (error) {
+    console.error('[Supabase] Error deleting contact:', error.message);
     throw new Error(error.message);
   }
 };

@@ -352,7 +352,7 @@ const BookingDetails = ({
         <h3>Asistente IA / Notas</h3>
         <button 
           className="btn-secondary" 
-          onClick={handleSmartUpdate}
+          onClick={() => handleSmartUpdate(notes)}
           disabled={isProcessingAI}
           style={{ fontSize: '0.75rem', padding: '4px 10px' }}
         >

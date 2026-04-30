@@ -302,7 +302,7 @@ const VoucherPreview = ({
             <button
               className="btn-secondary"
               style={{ padding: '6px 12px', fontSize: '0.8rem', backgroundColor: '#e2e8f0' }}
-              onClick={handleSmartUpdate}
+              onClick={() => handleSmartUpdate(notes)}
               disabled={isProcessingAI}
             >
               {isProcessingAI ? '🪄 Pensando...' : '🪄 Aplicar Comando'}

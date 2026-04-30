@@ -43,13 +43,34 @@ const callGemini = async (prompt, systemInstruction = "Você é um assistente de
 
     try {
         let cleanText = textResponse.trim();
+        
+        // Remove markdown formatting if present
         if (cleanText.startsWith('```')) {
             cleanText = cleanText.replace(/^```(?:json)?\n?/i, '').replace(/\n?```$/i, '');
         }
+
+        // Sometimes AI includes conversational text outside the JSON. 
+        // Force extract the JSON object/array.
+        const firstBrace = cleanText.indexOf('{');
+        const firstBracket = cleanText.indexOf('[');
+        const lastBrace = cleanText.lastIndexOf('}');
+        const lastBracket = cleanText.lastIndexOf(']');
+        
+        let firstIndex = -1;
+        if (firstBrace !== -1 && firstBracket !== -1) firstIndex = Math.min(firstBrace, firstBracket);
+        else if (firstBrace !== -1) firstIndex = firstBrace;
+        else if (firstBracket !== -1) firstIndex = firstBracket;
+
+        let lastIndex = Math.max(lastBrace, lastBracket);
+
+        if (firstIndex !== -1 && lastIndex !== -1 && lastIndex >= firstIndex) {
+            cleanText = cleanText.substring(firstIndex, lastIndex + 1);
+        }
+
         return JSON.parse(cleanText);
     } catch (e) {
         console.error("Failed to parse JSON from AI:", textResponse);
-        throw new Error('A resposta da IA não é um JSON válido.');
+        throw new Error('A resposta da IA não é um JSON válido. Resposta: ' + textResponse.substring(0, 100) + '...');
     }
 };
 
@@ -82,53 +103,66 @@ ${catalogStr}
 Você deve retornar EXATAMENTE um JSON na seguinte estrutura:
 {
   "name": "Nome",
-  "phone": "Telefone extraído (com código de área)",
+  "phone": "Telefone extraído (com código de país +55 para Brasil)",
   "passport": "RG ou Passaporte",
   "cpf": "CPF se houver",
   "address": "Endereço completo",
-  "cep": "CEP",
-  "dob": "Data de nascimento",
+  "cep": "CEP (somente números e hífen)",
+  "dob": "YYYY-MM-DD",
   "email": "Email",
   "instagram": "Instagram sem o @",
-  "city": "Cidade de origem ou moradia",
-  "arrival": "Data de Chegada",
-  "departure": "Data de Saída",
+  "city": "Cidade de destino (Cartagena, San Andrés, etc.)",
+  "arrival": "YYYY-MM-DD",
+  "departure": "YYYY-MM-DD",
   "pax": "Número total de pessoas (apenas os dígitos)",
-  "paxChildren": "Número de crianças",
+  "paxChildren": "Número de crianças (0 se não mencionado)",
   "companionList": [
-    { "name": "Nome Completo", "doc": "RG/Passaporte se houver" }
+    { "name": "Nome Completo", "doc": "RG/Passaporte se houver", "dob": "YYYY-MM-DD ou vazio" }
   ],
-  "hotel": "Hotel/Hospedagem",
+  "hotel": "Hotel/Hospedagem (vazio se não informado)",
   "source": "Como encontrou a viagem",
   "nextDestination": "Próximo destino",
-  "emergency": "Contato de emergência",
+  "emergency": "Contato de emergência (nome + número)",
   "motivoViagem": "Motivo",
   "geniLink": "Algum link geni.travel se houver",
   "tours": [
     {
       "ID": "id original do catálogo se houver match. Nulo se for novo.",
       "Passeio": "Nome do Passeio (idêntico ao catálogo se houver match)",
-      "Ciudad": "Cidade onde ocorre",
+      "Ciudad": "Cidade onde ocorre o passeio",
       "Valor_venda_COP": 0,
       "Preco_custo_COP": 0,
       "ENTRADA": 0,
       "Local": "Local do catálogo ou em branco",
       "Hora": "Hora do catálogo ou em branco",
       "Taxas_valor": 0,
-      "date": "Data sugerida (formato YYYY-MM-DD)",
+      "date": "YYYY-MM-DD",
       "Descricao": "Ad-hoc ou Catalog"
     }
   ]
 }
 
+⚠️ REGRA ABSOLUTA DE FORMATAÇÃO DE DATAS:
+TODAS as datas (dob, arrival, departure, date dos tours) DEVEM ser retornadas no formato ISO 8601: YYYY-MM-DD.
+Exemplos de conversão obrigatória:
+- "09.8.2026" → "2026-08-09"
+- "09/08/2026" → "2026-08-09"
+- "9 de agosto" → "2026-08-09"
+- "09.12.1999" → "1999-12-09"
+Se o ano não for mencionado, use o ano corrente (${today.getFullYear()}).
+NUNCA retorne datas em formato DD/MM/YYYY ou DD.MM.YYYY.
+
 REGRAS DE LIMPEZA E EXTRAÇÃO:
-1. ACOMPANHANTES: Se houver 3 pessoas (1 titular + 2 acompanhantes), o array 'companionList' deve ter exatamente 2 objetos. Se o cliente apenas disser "vou com minha esposa Maria", coloque {"name": "Maria", "doc": ""}.
-2. REMOVA prefixos de listas numeradas. Por exemplo, se na mensagem diz "5. CEP: 01000", retorne apenas "01000". NUNCA inclua o texto do rótulo (ex: "CPF:", "Email:") dentro do valor.
+1. ACOMPANHANTES: Se houver 3 pessoas (1 titular + 2 acompanhantes), o array 'companionList' deve ter exatamente 2 objetos. Se o cliente apenas disser "vou com minha esposa Maria", coloque {"name": "Maria", "doc": "", "dob": ""}. Se o pax é 2 mas não há dados do acompanhante, crie UM objeto com campos vazios.
+2. REMOVA prefixos de listas numeradas. Por exemplo, se na mensagem diz "5. CEP: 01000", retorne apenas "01000". NUNCA inclua o texto do rótulo (ex: "CPF:", "Email:", "Nome Completo do titular da reserva:") dentro do valor.
 3. DATA ATUAL: Use a data de hoje (${dateStr}) para interpretar termos como "amanhã", "depois de amanhã" ou dias da semana.
-4. Se a mensagem for um formulário preenchido, extraia apenas os valores após os dois pontos.
+4. Se a mensagem for um formulário preenchido, extraia APENAS os valores após os dois pontos. NUNCA inclua o número da lista ou o rótulo.
 5. MATCH ESTRITO DE TOURS: Se o cliente pedir um passeio (ex: 'bora'), busque no catálogo o MATCH EXATO (ex: 'Bora Bora Club' ou 'Bora Vip'). O campo "Passeio" DEVE SER 100% IDÊNTICO ao valor 'n' do catálogo. Se não tiver certeza absoluta de qual é, defina o "ID" como null e coloque exatamente o que o cliente escreveu no campo "Passeio". É PROIBIDO inventar variações (ex: criar "Bora VIP" se o catálogo diz "Bora Vip").
 6. DATAS DISTINTAS (NÃO MESCLAR): Se o cliente pedir passeios similares em DUAS DATAS DIFERENTES (ex: '23/4 bora' e '26/4 bora vip'), VOCÊ DEVE CRIAR DOIS OBJETOS DISTINTOS no array 'tours', um para cada data. NUNCA agrupe passeios com datas diferentes.
 7. Tudo que não for encontrado, deixe como string vazia "".
+8. CIDADE DO PASSEIO: O campo "city" é a cidade DE DESTINO da viagem (Cartagena, San Andrés, etc.), NÃO a cidade de origem do cliente. A cidade de origem deve ser ignorada se não há campo para ela.
+9. TELEFONE: Adicione o prefixo +55 para números brasileiros se não tiver código de país. Mantenha apenas dígitos e o símbolo +.
+10. paxChildren: Se não mencionado explicitamente, retorne "0".
 `;
 
     return await callGemini(prompt);

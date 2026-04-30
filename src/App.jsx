@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './index.css';
 import { Copy, Check, Plane, DollarSign, Calendar, MessageSquare, Plus, Trash2, Download, Settings, Users, History, FileText, Send, GripVertical, Calculator } from 'lucide-react';
 // import productsUnified from './data/products_unified.json'; // DEPRECATED: Supabase is the source of truth
-import {
-  cleanDuplicateProducts,
-  cleanDuplicateContacts,
-  deleteContact
-} from './db'; // Mantenemos solo las funciones de utilidad que aún no hemos migrado
+// [REMEDIACIÓN 1.2] db.js TOTALMENTE DEPRECIADO — Todas las funciones ahora viven en supabase.js
+// Las funciones deleteContact, cleanDuplicateProducts, cleanDuplicateContacts
+// fueron marcadas como deprecated en db.js. Se eliminan sus imports para evitar crasheos.
+// Si se necesita deleteContact, usar directamente supabase.from('contacts').delete().
 
 import logo from './assets/logo.png';
 import { jsPDF } from 'jspdf';
@@ -16,7 +15,8 @@ import { parsePriceUpdateAI, getGeminiKey, setGeminiKey } from './gemini';
 import { getProviderMessage } from './data/providerTemplates';
 import { 
   getProductsFromSupabase, updateProductSupabase, saveProductSupabase, deleteProductSupabase,
-  saveBookingSupabase, getContactsFromSupabase, getConfirmationsFromSupabase, deleteConfirmationSupabase
+  saveBookingSupabase, getContactsFromSupabase, getConfirmationsFromSupabase,
+  deleteConfirmationSupabase, deleteContactSupabase // [REMEDIACIÓN 1.2] deleteContactSupabase reemplaza db.js
 } from './supabase';
 
 // Modular Components & Utils
@@ -31,6 +31,8 @@ import VoucherPreview from './components/VoucherPreview';
 import { useBookingTotals } from './hooks/useBookingTotals';
 import { usePricesMap } from './hooks/usePricesMap';
 import { useAIProcessor } from './hooks/useAIProcessor';
+import { useProductCatalog } from './hooks/useProductCatalog';
+import { useBookingPersistence } from './hooks/useBookingPersistence';
 import { formatCOP, formatDateDisplay, formatCurrency, toTitleCase } from './utils/formatters';
 import {
   DndContext,
@@ -89,14 +91,25 @@ const App = () => {
   const [isCopying, setIsCopying] = useState(false);
   const [notes, setNotes] = useState('');
   const [isSavingPDF, setIsSavingPDF] = useState(false);
-  const [isSavingData, setIsSavingData] = useState(false);
   const [historyData, setHistoryData] = useState([]);
   const [contactsData, setContactsData] = useState([]);
   const [loadingTab, setLoadingTab] = useState(false);
-  const [pricesDb, setPricesDb] = useState([]);
-  const [priceUpdateText, setPriceUpdateText] = useState('');
-  const [exchangeRate, setExchangeRate] = useState(null);
-  const [offlineMode, setOfflineMode] = useState(false); // Desativa Gemini para testes locais
+  
+  // Hook de Catálogo (Centraliza Productos y Tasas)
+  const {
+    pricesDb,
+    setPricesDb,
+    exchangeRate,
+    setExchangeRate,
+    manualRate,
+    setManualRate,
+    isProcessingAI: isProcessingCatalogAI,
+    setIsProcessingAI: setIsProcessingCatalogAI,
+    priceUpdateText,
+    setPriceUpdateText,
+    handleAIPriceUpdate,
+    syncBookingWithCatalog
+  } = useProductCatalog();
 
   const [aiKeyInput, setAiKeyInput] = useState(getGeminiKey());
   const [whatsappText, setWhatsappText] = useState('');
@@ -108,6 +121,7 @@ const App = () => {
   const [contactSearch, setContactSearch] = useState('');
   const [expandedContactId, setExpandedContactId] = useState(null);
   const [globalTaxasText, setGlobalTaxasText] = useState(localStorage.getItem('TET_GLOBAL_TAXAS_TEXT') || 'Taxas: [VALOR] por pessoa somente em dinero pesos colombianos (sujeitos a alteração)');
+  const [offlineMode, setOfflineMode] = useState(false);
 
   // Hook Financeiro
   const {
@@ -115,21 +129,19 @@ const App = () => {
     setPaymentMethod,
     wiseMarkup,
     setWiseMarkup,
-    manualRate,
-    setManualRate,
     financialOverrides,
     setFinancialOverrides,
     totals,
     generateWhatsAppMessage
-  } = useBookingTotals(bookingData, pricesDb, exchangeRate);
+  } = useBookingTotals(bookingData, pricesDb, exchangeRate, manualRate);
 
   // Hook: O(1) product catalog lookup (replaces all .find() calls on pricesDb)
   const { findProduct } = usePricesMap(pricesDb);
 
   // Hook: Gemini AI orchestration (processMessage, handleSmartUpdate)
   const {
-    isProcessingAI,
-    setIsProcessingAI, // Now exported
+    isProcessingAI: isProcessingBookingAI,
+    setIsProcessingAI: setIsProcessingBookingAI,
     processMessage,
     handleSmartUpdate,
   } = useAIProcessor({
@@ -138,8 +150,31 @@ const App = () => {
     bookingData,
     setBookingData,
     setStep,
-    offlineMode, // Pass offlineMode to the hook
+    offlineMode,
   });
+
+  // Hook de Persistencia (Guardado y Borrado)
+  const {
+    isSavingData,
+    handleSaveData,
+    handleDeleteConfirmation
+  } = useBookingPersistence({
+    bookingData,
+    setBookingData,
+    pricesDb,
+    totals,
+    paymentMethod,
+    notes,
+    setHistoryData,
+    setLoadingTab
+  });
+
+  // Derived Processing State
+  const isProcessingAI = isProcessingBookingAI || isProcessingCatalogAI;
+  const setIsProcessingAI = (val) => {
+    setIsProcessingBookingAI(val);
+    setIsProcessingCatalogAI(val);
+  };
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
@@ -180,79 +215,9 @@ const App = () => {
     loadTabData();
   }, [activeTab]);
 
-  useEffect(() => {
-    fetch('https://api.exchangerate-api.com/v4/latest/BRL')
-      .then(res => res.json())
-      .then(data => {
-        if (data?.rates?.COP && !isNaN(data.rates.COP)) {
-          setExchangeRate(data.rates.COP);
-          setManualRate(data.rates.COP);
-        } else {
-          console.warn('Exchange rate API returned unexpected data:', data);
-        }
-      })
-      .catch(err => console.error("Error fetching rates:", err));
-
-    // V4: Load products from Supabase (clean catalog, no duplicates)
-    const loadProducts = async () => {
-      const data = await getProductsFromSupabase();
-      if (data.length > 0) {
-        // V5: Alphabetical sort by Passeio or name
-          const sorted = data.sort((a, b) => {
-            const nameA = (a.Passeio || a.name || '').toLowerCase();
-            const nameB = (b.Passeio || b.name || '').toLowerCase();
-            return nameA.localeCompare(nameB);
-          }).map(p => ({ ...p, uuid: p.uuid || Math.random().toString(36).substring(2, 9) }));
-          setPricesDb(sorted);
-          console.log(`[V5] Loaded ${sorted.length} sorted products from Supabase (with UUIDs) ✅`);
-      } else {
-        console.warn('[V4] Supabase returned 0 products, using local JSON fallback.');
-      }
-    };
-    loadProducts();
-
-  }, []);
-
   // Sync bookingData with pricesDb updates (e.g. from Settings)
   useEffect(() => {
-    if (bookingData.tours && bookingData.tours.length > 0) {
-      setBookingData(prev => {
-        let changed = false;
-        const newTours = prev.tours.map(tour => {
-          const updatedDbTour = pricesDb.find(dbTour => (dbTour.id === tour.id) || (dbTour.Passeio === tour.Passeio));
-          if (updatedDbTour) {
-            if (
-              tour.Local !== updatedDbTour.Local ||
-              tour.meet_point !== updatedDbTour.meet_point ||
-              tour.Hora !== updatedDbTour.Hora ||
-              tour.time !== updatedDbTour.time ||
-              tour.Taxas_valor !== updatedDbTour.Taxas_valor ||
-              tour.Taxas_info !== updatedDbTour.Taxas_info ||
-              tour.voucher_obs !== updatedDbTour.voucher_obs
-            ) {
-              changed = true;
-              return {
-                ...tour,
-                Local: updatedDbTour.Local,
-                meet_point: updatedDbTour.meet_point,
-                Hora: updatedDbTour.Hora,
-                time: updatedDbTour.time,
-                Taxas_valor: updatedDbTour.Taxas_valor,
-                Taxas_info: updatedDbTour.Taxas_info,
-                fees_value: updatedDbTour.Taxas_valor, // using mapped values
-                fees_info: updatedDbTour.Taxas_info,
-                voucher_obs: updatedDbTour.voucher_obs
-              };
-            }
-          }
-          return tour;
-        });
-        if (changed) {
-          return { ...prev, tours: newTours };
-        }
-        return prev;
-      });
-    }
+    syncBookingWithCatalog(bookingData, setBookingData);
   }, [pricesDb]);
 
   // Date Formatter Helper for Filename
@@ -265,7 +230,19 @@ const App = () => {
     return `${day}-${month}-${year}`;
   };
 
-
+  // Copy WhatsApp message to clipboard
+  const copyToClipboard = async () => {
+    if (isCopying) return;
+    try {
+      const text = generateWhatsAppMessage();
+      await navigator.clipboard.writeText(text);
+      setIsCopying(true);
+      setTimeout(() => setIsCopying(false), 2000);
+    } catch (err) {
+      console.error('Erro ao copiar:', err);
+      alert('Erro ao copiar para a área de transferência.');
+    }
+  };
 
 
 
@@ -349,65 +326,7 @@ const App = () => {
     a.download = `contatos_TET_${new Date().toISOString().slice(0, 10)}.csv`;
     a.click();
     URL.revokeObjectURL(url);
-    alert(`Exportados ${contactsData.length} contatos con sucesso!`);
-  };
-
-  const handleAIPriceUpdate = async () => {
-    if (!priceUpdateText || priceUpdateText.trim() === '') {
-      alert('Texto vazio.');
-      return;
-    }
-
-    setIsProcessingAI(true);
-    try {
-      const response = await parsePriceUpdateAI(priceUpdateText, pricesDb);
-      console.log("Gemini Price Update Result:", response);
-
-      if (response && response.updates && response.updates.length > 0) {
-        let updateCount = 0;
-        const newPrices = [...pricesDb];
-
-        response.updates.forEach(update => {
-          const idx = newPrices.findIndex(p => 
-            (p.id && update.id && p.id === update.id) || 
-            (p.Passeio || '').toLowerCase() === (update.Passeio || '').toLowerCase()
-          );
-
-          if (idx !== -1) {
-            newPrices[idx] = {
-              ...newPrices[idx],
-              Valor_venda_COP: update.Valor_venda_COP || newPrices[idx].Valor_venda_COP,
-              ENTRADA: update.ENTRADA !== undefined ? update.ENTRADA : newPrices[idx].ENTRADA,
-              Preco_custo_COP: update.Preco_custo_COP !== undefined ? update.Preco_custo_COP : newPrices[idx].Preco_custo_COP
-            };
-            updateCount++;
-          } else if (update.Valor_venda_COP > 0) {
-            newPrices.push({
-              Passeio: update.Passeio,
-              Valor_venda_COP: update.Valor_venda_COP || 0,
-              ENTRADA: update.ENTRADA || 0,
-              Preco_custo_COP: update.Preco_custo_COP || 0,
-              Ciudad: 'Cartagena',
-              Local: '', Hora: '', Taxas_valor: 0,
-              id: null,
-              uuid: Math.random().toString(36).substring(2, 9)
-            });
-            updateCount++;
-          }
-        });
-
-        setPricesDb(newPrices);
-        alert(`IA processou com sucesso e atualizou ${updateCount} passeios. Clique em 'Salvar Alterações' para persistir no banco.`);
-        setPriceUpdateText('');
-      } else {
-        alert('A IA não detectou atualizaciones explícitas no texto.');
-      }
-    } catch (err) {
-      console.error('Erro ao processar preços via IA:', err);
-      alert('Erro na IA: ' + err.message);
-    } finally {
-      setIsProcessingAI(false);
-    }
+    alert(`Exportados ${contactsData.length} contatos com sucesso!`);
   };
 
   const handleNewBooking = () => {
@@ -449,172 +368,6 @@ const App = () => {
     handleNewBooking(); // Reset state
     setStep(2); // Go straight to the grid
     setActiveTab('calculator'); // Keep 'calculator' active for the sidebar highlight
-  };
-
-
-
-  const handleDeleteConfirmation = async (id) => {
-    if (window.confirm('Deseja excluir esta confirmação permanentemente?')) {
-      setLoadingTab(true);
-      try {
-        await deleteConfirmationSupabase(id);
-        const data = await getConfirmationsFromSupabase(20);
-        setHistoryData(data);
-      } catch (err) {
-        alert('Erro al eliminar: ' + err.message);
-      } finally {
-        setLoadingTab(false);
-      }
-    }
-  };
-
-  const copyToClipboard = async () => {
-    if (activeTab === 'booking' && !isSavingData) {
-      await handleSaveData();
-    }
-    navigator.clipboard.writeText(whatsappText || generateWhatsAppMessage());
-    setIsCopying(true);
-    setTimeout(() => setIsCopying(false), 2000);
-  };
-
-  const handleSaveData = async () => {
-    if (isSavingData) return;
-    setIsSavingData(true);
-
-    const sanitizePayload = (obj) => {
-      const clean = JSON.parse(JSON.stringify(obj, (key, value) => {
-        if (typeof value === 'number' && isNaN(value)) return 0;
-        if (value === undefined) return null;
-        return value;
-      }));
-      return clean;
-    };
-
-    // 1. Interactive Check: Price Changes or New Products
-    const productsToUpdate = [];
-    const newProductsToSave = [];
-
-    for (const tour of bookingData.tours) {
-      const original = pricesDb.find(p => (p.Passeio || '').toLowerCase() === (tour.Passeio || '').toLowerCase());
-
-      if (original) {
-        // Check if prices differ from DB
-        const hasVendaDiff = tour['Valor de venda (COP)'] !== original.Valor_venda_COP;
-        const hasEntradaDiff = tour['ENTRADA'] !== original.ENTRADA;
-
-        if (hasVendaDiff || hasEntradaDiff) {
-          productsToUpdate.push({
-            id: original.id,
-            name: tour.Passeio,
-            oldVenda: original.Valor_venda_COP,
-            newVenda: tour['Valor de venda (COP)'],
-            oldEntrada: original.ENTRADA,
-            newEntrada: tour['ENTRADA']
-          });
-        }
-      } else {
-        // It's a brand new product not in Prices DB
-        newProductsToSave.push(tour);
-      }
-    }
-
-    // 2. Save to Supabase
-    try {
-      // Build companions string from companionList if used
-      const finalCompanions = (bookingData.companionList && bookingData.companionList.length > 0)
-        ? bookingData.companionList.map(c => `${c.name || ''} ${c.doc ? `(${c.doc})` : ''}`).filter(b => b.trim() !== '').join('\n')
-        : bookingData.companions;
-
-      const cleanData = sanitizePayload({
-        ...bookingData,
-        contact: {
-          name: bookingData.name,
-          phone: bookingData.phone,
-          cpf: bookingData.cpf,
-          email: bookingData.email,
-          passport: bookingData.passport,
-          address: bookingData.address,
-          cep: bookingData.cep,
-          dob: bookingData.dob,
-          instagram: bookingData.instagram,
-          city: bookingData.city,
-          source: bookingData.source,
-          emergency: bookingData.emergency,
-          motivoViagem: bookingData.motivoViagem,
-          nextDestination: bookingData.nextDestination
-        },
-        companions: finalCompanions,
-        totals,
-        paymentMethod,
-        notes,
-        status: 'confirmed'
-      });
-
-      // FIX: Capture returned bookingId to prevent duplicate INSERT on re-save
-      const savedBookingId = await saveBookingSupabase(cleanData);
-      if (savedBookingId && !bookingData.id) {
-        setBookingData(prev => ({ ...prev, id: savedBookingId }));
-      }
-
-      // Refresh history data immediately
-      const updatedHistory = await getConfirmationsFromSupabase(20);
-      setHistoryData(updatedHistory);
-
-      console.log(`✅ Reserva ${bookingData.id ? 'atualizada' : 'salva'} no banco de dados com sucesso! ID: ${savedBookingId || bookingData.id}`);
-
-      // 3. Post-save Catalog Update (Optional/Supabase)
-      // This part is now sequenced AFTER the booking is safely stored.
-      if (productsToUpdate.length > 0 || newProductsToSave.length > 0) {
-        // We use a small timeout to let the UI breathe
-        setTimeout(async () => {
-          if (productsToUpdate.length > 0) {
-            const updateNames = productsToUpdate.map(p => p.name).join(', ');
-            if (window.confirm(`Detectamos mudanças de preços em: ${updateNames}.\n\nDeseja atualizar o Catálogo Master com esses novos valores?`)) {
-              try {
-                for (const p of productsToUpdate) {
-                  await updateProductSupabase(p.id, { 
-                    Passeio: p.name,
-                    Valor_venda_COP: p.newVenda, 
-                    ENTRADA: p.newEntrada 
-                  });
-                }
-                alert('Catálogo atualizado!');
-              } catch (supaErr) {
-                console.error('Supabase update error:', supaErr);
-              }
-            }
-          }
-
-          if (newProductsToSave.length > 0) {
-            const newNames = newProductsToSave.map(p => p.Passeio).join(', ');
-            if (window.confirm(`Novos produtos detectados: ${newNames}.\n\nDeseja salvá-los no Catálogo Master?`)) {
-              try {
-                for (const p of newProductsToSave) {
-                  // Ensure we use keys expected by toSupabaseProduct
-                  const productToSave = {
-                    ...p,
-                    Passeio: p.Passeio,
-                    Valor_venda_COP: p['Valor de venda (COP)'],
-                    ENTRADA: p['ENTRADA'],
-                    Preco_custo_COP: p['Preço custo (COP)'] || p.Preco_custo_COP
-                  };
-                  await saveProductSupabase(productToSave);
-                }
-                alert('Novos produtos adicionados ao catálogo!');
-              } catch (supaErr) {
-                console.error('Supabase save error:', supaErr);
-              }
-            }
-          }
-        }, 500);
-      }
-
-    } catch (err) {
-      console.error('Firestore Save Error:', err);
-      alert('Erro ao salvar no banco de dados. Verifique sua conexão.');
-    } finally {
-      setIsSavingData(false);
-    }
   };
 
   const handleGeneratePDF = async () => {
@@ -797,7 +550,7 @@ const App = () => {
             getContacts={getContactsFromSupabase}
             setContactsData={setContactsData}
             setLoadingTab={setLoadingTab}
-            deleteContact={deleteContact}
+            deleteContact={deleteContactSupabase}
             setHistorySearch={setHistorySearch}
             setActiveTab={setActiveTab}
           />
@@ -836,7 +589,7 @@ const App = () => {
             deleteProduct={deleteProductSupabase}
             updateProduct={updateProductSupabase}
             saveProduct={saveProductSupabase}
-            cleanDuplicateProducts={cleanDuplicateProducts}
+            cleanDuplicateProducts={async () => alert('⚠️ Función migrada a Supabase Dashboard. Use el panel de administración para esta operación.')}
             getProducts={getProductsFromSupabase}
             priceUpdateText={priceUpdateText}
             setPriceUpdateText={setPriceUpdateText}
@@ -846,7 +599,7 @@ const App = () => {
             getContacts={getContactsFromSupabase}
             setHistoryData={setHistoryData}
             setContactsData={setContactsData}
-            cleanDuplicateContacts={cleanDuplicateContacts}
+            cleanDuplicateContacts={async () => alert('⚠️ Función migrada a Supabase Dashboard. Use el panel de administración para esta operación.')}
             loadingTab={loadingTab}
             setLoadingTab={setLoadingTab}
             globalTaxasText={globalTaxasText}

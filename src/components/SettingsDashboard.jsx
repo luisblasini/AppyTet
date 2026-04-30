@@ -1,5 +1,6 @@
 import React from 'react';
 import { Settings, Trash2, Plus, FileText } from 'lucide-react';
+import { toTitleCase } from '../utils/formatters';
 
 export default function SettingsDashboard({
   aiKeyInput,
@@ -398,10 +399,6 @@ export default function SettingsDashboard({
           <button id="btn-save-cloud" className="btn-primary" style={{ padding: '12px 30px', fontSize: '1rem', background: '#059669' }} onClick={async () => {
             setLoadingTab(true);
             try {
-              const toTitleCase = (str) => {
-                if (!str) return '';
-                return str.toLowerCase().split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-              };
 
               const newPrices = [];
               for (const p of pricesDb) {
